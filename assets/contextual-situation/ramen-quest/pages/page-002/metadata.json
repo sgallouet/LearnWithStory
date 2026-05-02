@@ -165,14 +165,24 @@
         "scale": 2.3
       },
       {
-        "label": "Very firm choice",
+        "label": "Noodle firmness options",
         "rect": {
-          "x": 0.42,
+          "x": 0.02,
           "y": 0.82,
-          "w": 0.56,
+          "w": 0.68,
           "h": 0.17
         },
-        "scale": 2.35
+        "scale": 1.9
+      },
+      {
+        "label": "Very firm choice",
+        "rect": {
+          "x": 0.66,
+          "y": 0.82,
+          "w": 0.32,
+          "h": 0.17
+        },
+        "scale": 2.25
       }
     ]
   },

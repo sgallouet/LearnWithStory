@@ -2,10 +2,195 @@
   "laneId": "nodeheart-series",
   "laneName": "Nodeheart Series",
   "bookId": "nodeheart-luminus",
-  "pageId": "page-001",
   "chapterNumber": "01",
   "chapterName": "The Shark King",
   "chapter": "Chapter 01: The Shark King",
-  "image": null,
-  "metadata": {}
+  "pageId": "page-001",
+  "pageNumber": 1,
+  "pageTitle": "Confronting King Hammer",
+  "displayTitle": "Confronting King Hammer",
+  "image": "page-001-confronting-king-hammer.png",
+  "width": 1024,
+  "height": 1536,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "おい！お姉ちゃんを返せよ！",
+        "reading": "おい！おねえちゃんを かえせよ！",
+        "romaji": "Oi! Onee-chan o kaese yo!",
+        "english": "Hey! Give me my sister back!",
+        "note": "返せ is the rough command form of 返す, meaning 'give back' or 'return.'"
+      },
+      {
+        "japanese": "ははは！小僧が何をほざくか！",
+        "reading": "ははは！こぞうが なにを ほざくか！",
+        "romaji": "Hahaha! Kozo ga nani o hozaku ka!",
+        "english": "Hahaha! What is a little runt babbling about?",
+        "note": "小僧 is a belittling word for a boy. ほざく is a rude verb for 'say' or 'babble.'"
+      },
+      {
+        "japanese": "あいつは大切な家族だ！金なんかで買えない！",
+        "reading": "あいつは たいせつな かぞくだ！かねなんかで かえない！",
+        "romaji": "Aitsu wa taisetsu na kazoku da! Kane nanka de kaenai!",
+        "english": "She is my family! You cannot buy her with money!",
+        "note": "なんか dismisses the noun before it, like 'money or anything like that.'"
+      },
+      {
+        "japanese": "ここはオレ様の国、オレ様のルールだ。気に入らねぇなら、帰れ。",
+        "reading": "ここは おれさまの くに、おれさまの ルールだ。きにいらねぇなら、かえれ。",
+        "romaji": "Koko wa oresama no kuni, oresama no ruru da. Ki ni iranee nara, kaere.",
+        "english": "This is my kingdom, my rules. If you do not like it, get lost.",
+        "note": "オレ様 is an arrogant way to say 'I.' 帰れ is a blunt command: 'go home' or 'leave.'"
+      },
+      {
+        "japanese": "絶対に連れて帰るからな！！",
+        "reading": "ぜったいに つれて かえるからな！！",
+        "romaji": "Zettai ni tsurete kaeru kara na!!",
+        "english": "I swear I will take her back no matter what!",
+        "note": "連れて帰る means to bring or take someone home. からな adds forceful resolve."
+      },
+      {
+        "japanese": "来てみな、食われてしまうぞ？",
+        "reading": "きてみな、くわれてしまうぞ？",
+        "romaji": "Kite mina, kuwarete shimau zo?",
+        "english": "Then come. You might end up eaten.",
+        "note": "食われる is the passive form of 食う, 'to be eaten.' しまう adds an unfortunate result."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "お姉ちゃん",
+        "reading": "おねえちゃん",
+        "romaji": "onee-chan",
+        "meaning": "older sister",
+        "note": "A familiar, affectionate way to say older sister."
+      },
+      {
+        "term": "返せ",
+        "reading": "かえせ",
+        "romaji": "kaese",
+        "meaning": "give it back",
+        "note": "A rough imperative form used when angry or desperate."
+      },
+      {
+        "term": "小僧",
+        "reading": "こぞう",
+        "romaji": "kozo",
+        "meaning": "brat; little runt",
+        "note": "A condescending word for a boy."
+      },
+      {
+        "term": "大切",
+        "reading": "たいせつ",
+        "romaji": "taisetsu",
+        "meaning": "precious; important",
+        "note": "Often used for people or things that matter deeply."
+      },
+      {
+        "term": "家族",
+        "reading": "かぞく",
+        "romaji": "kazoku",
+        "meaning": "family",
+        "note": "A core word for family members as a group."
+      },
+      {
+        "term": "オレ様",
+        "reading": "おれさま",
+        "romaji": "oresama",
+        "meaning": "my great self",
+        "note": "A pompous, villain-like first-person pronoun."
+      },
+      {
+        "term": "絶対に",
+        "reading": "ぜったいに",
+        "romaji": "zettai ni",
+        "meaning": "absolutely; no matter what",
+        "note": "Adds strong certainty or determination."
+      },
+      {
+        "term": "食われる",
+        "reading": "くわれる",
+        "romaji": "kuwareru",
+        "meaning": "to be eaten",
+        "note": "Passive of the rough verb 食う."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Demand before the throne",
+        "rect": {
+          "x": 0.03,
+          "y": 0.07,
+          "w": 0.95,
+          "h": 0.31
+        },
+        "scale": 1.6
+      },
+      {
+        "label": "King Hammer mocks Rio",
+        "rect": {
+          "x": 0.02,
+          "y": 0.39,
+          "w": 0.48,
+          "h": 0.19
+        },
+        "scale": 2.25
+      },
+      {
+        "label": "Family cannot be bought",
+        "rect": {
+          "x": 0.51,
+          "y": 0.39,
+          "w": 0.47,
+          "h": 0.19
+        },
+        "scale": 2.25
+      },
+      {
+        "label": "The king makes the rules",
+        "rect": {
+          "x": 0.02,
+          "y": 0.59,
+          "w": 0.47,
+          "h": 0.18
+        },
+        "scale": 2.25
+      },
+      {
+        "label": "The captive sister",
+        "rect": {
+          "x": 0.5,
+          "y": 0.59,
+          "w": 0.48,
+          "h": 0.18
+        },
+        "scale": 1.9
+      },
+      {
+        "label": "Rio vows to take her back",
+        "rect": {
+          "x": 0.02,
+          "y": 0.79,
+          "w": 0.55,
+          "h": 0.2
+        },
+        "scale": 2
+      },
+      {
+        "label": "Next meal threat",
+        "rect": {
+          "x": 0.59,
+          "y": 0.79,
+          "w": 0.39,
+          "h": 0.2
+        },
+        "scale": 2.25
+      }
+    ]
+  },
+  "metadata": {
+    "storyOrder": "Rio confronts King Hammer and demands his sister back."
+  }
 }

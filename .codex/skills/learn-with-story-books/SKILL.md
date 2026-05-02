@@ -108,7 +108,7 @@ Each `pages/page-XXX/metadata.json` must describe both the image and the reader 
 }
 ```
 
-Use normalized `rect` values from `0` to `1`, where `(0, 0)` is the top-left of the image and `(1, 1)` is the bottom-right. Choose rectangles by reading the page and framing each important speech bubble, menu, panel, or action beat in a sensible reading order. Avoid redundant adjacent frames that show nearly the same content. The reader fits each rectangle into the viewport; small black margins are acceptable when an edge frame needs to stay centered. Use `scale` as the maximum zoom for that frame, never above `3`. Include romaji for both sentence and vocabulary entries.
+Use normalized `rect` values from `0` to `1`, where `(0, 0)` is the top-left of the image and `(1, 1)` is the bottom-right. Choose rectangles by reading the page and framing each important speech bubble, sign, menu, option label group, panel, or action beat in a sensible reading order. Do a coverage pass before finishing: every learner-relevant Japanese surface on the page should appear in the learning overlay and in at least one useful zoom point. For choice lists such as ramen flavors, toppings, or noodle firmness, include a dedicated focus frame for the labels/options before the character's selected response. Avoid redundant adjacent frames that show nearly the same content. The reader fits each rectangle into the viewport; small black margins are acceptable when an edge frame needs to stay centered. Use `scale` as the maximum zoom for that frame, never above `3`. Include romaji for both sentence and vocabulary entries.
 
 ## Add A Book
 
@@ -121,13 +121,15 @@ Use normalized `rect` values from `0` to `1`, where `(0, 0)` is the top-left of 
 
 ## Add A Page
 
-1. Find the next page number under `pages/` and create `page-XXX/`.
-2. Rename the supplied page image to `page-XXX-short-description.ext`, place it in that folder, and record its exact width and height.
-3. Read the Japanese text in the image. Add sentence explanations for English speakers learning Japanese, including `japanese`, `reading`, `romaji`, `english`, and a compact `note`.
-4. Add vocabulary entries for the main words, phrases, signs, menu items, and sound effects learners should notice. Include `term`, `reading`, `romaji`, `meaning`, and `note`.
-5. Choose guided zoom frames in reading order. Include a clear `label`, normalized `rect` with `x`, `y`, `w`, and `h`, and page-specific maximum `scale` no higher than `3`. Prefer fewer, well-framed regions over many overlapping frames.
-6. Add the metadata path to the book's `pages` array in `app.js`.
-7. Only update the library chapter label if the visible cover should represent a different chapter.
+1. Build a source-to-target map before moving files. For each supplied image, decide the story order from the page content, then record the absolute source path, target `page-XXX/` folder, meaningful filename, title, and expected role in the story. Do not rely on download timestamps for story order.
+2. Create all target page folders before copying images. Prefer a small Node script or native PowerShell `New-Item -Path ... -Force` plus `Copy-Item -LiteralPath ...`; avoid partial copy attempts where later page folders do not exist yet.
+3. Rename each supplied page image to `page-XXX-short-description.ext`, place it in that folder, and record its exact width and height. For PNG files, a Node script can read width and height from bytes `16` and `20` without needing an image library.
+4. For multi-page imports, prefer using Node to write `metadata.json` files as UTF-8. Japanese metadata can display as mojibake in Windows PowerShell if read with the wrong encoding; JSON validation should use Node `fs.readFileSync(file, "utf8")` or another explicit UTF-8 reader.
+5. Read the Japanese text in the image. Add sentence explanations for English speakers learning Japanese, including `japanese`, `reading`, `romaji`, `english`, and a compact `note`.
+6. Add vocabulary entries for the main words, phrases, signs, menu items, and sound effects learners should notice. Include `term`, `reading`, `romaji`, `meaning`, and `note`.
+7. Choose guided zoom frames in reading order. Include a clear `label`, normalized `rect` with `x`, `y`, `w`, and `h`, and page-specific maximum `scale` no higher than `3`. Include menu/choice label groups as their own frames when the page uses them for learning context. Prefer fewer, well-framed regions over many overlapping frames.
+8. Add the metadata path to the book's `pages` array in `app.js`.
+9. Only update the library chapter label if the visible cover should represent a different chapter.
 
 ## Reader Behavior
 
@@ -142,6 +144,7 @@ Preserve these interactions when modifying the app:
 7. Keep persistent reader UI minimal. Do not show a page number counter unless the user asks for it.
 8. Do not show persistent left/right arrow buttons in the reader. Navigation should stay gesture and keyboard driven after the tutorial.
 9. The zoom button toggles guided zoom mode. In guided zoom mode, horizontal swipes and keyboard left/right arrows move between `zoom.points`. Each point fits a `rect` frame nicely in the viewport, with a quick animated movement between frames on the same page. When the reader passes the final zoom frame, continue to zoom frame 1 of the next page. When moving backward before the first zoom frame, continue to the final zoom frame of the previous page.
+10. Preserve low-impact async preloading. The library should warm the first page metadata and image for each visible story, and the reader should warm the current, next, and previous page images without blocking rendering.
 
 ## Add Universe Or Story Data
 
@@ -149,4 +152,4 @@ Use focused Markdown or JSON files. Prefer one file per character, place, monste
 
 ## Verification
 
-Validate JSON before finishing. Run `node --check app.js` after app changes. For UI changes, serve `index.html` and confirm the cover list, reader, page navigation, fullscreen button, learning overlay, and guided zoom behavior.
+Validate JSON before finishing. For Japanese metadata, prefer Node-based UTF-8 validation over PowerShell `ConvertFrom-Json` unless PowerShell is explicitly reading UTF-8. Check that every registered metadata path exists, every referenced image exists, image dimensions match metadata, every sentence has `japanese`, `reading`, `romaji`, `english`, and `note`, every vocabulary item has `term`, `reading`, `romaji`, `meaning`, and `note`, and every zoom `scale` is `<= 3`. Run `node --check app.js` after app changes. If the server is running, confirm `app.js`, at least one new metadata file, and at least one new page image return HTTP `200`. For UI changes, serve `index.html` and confirm the cover list, reader, page navigation, fullscreen button, learning overlay, and guided zoom behavior.

@@ -1,0 +1,203 @@
+{
+  "laneId": "nodeheart-series",
+  "laneName": "Nodeheart Series",
+  "bookId": "nodeheart-luminus",
+  "chapterNumber": "01",
+  "chapterName": "The Shark King",
+  "chapter": "Chapter 01: The Shark King",
+  "pageId": "page-005",
+  "pageNumber": 5,
+  "pageTitle": "The Abyssal Beast Appears",
+  "displayTitle": "The Abyssal Beast Appears",
+  "image": "page-005-abyssal-beast-appears.png",
+  "width": 1024,
+  "height": 1536,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "ズゥオオオオ。",
+        "reading": "ズゥオオオオ。",
+        "romaji": "Zuoooo.",
+        "english": "A massive roar rumbles out.",
+        "note": "This stretched sound effect makes the monster feel huge and heavy."
+      },
+      {
+        "japanese": "なんだ...あの化け物は...！？",
+        "reading": "なんだ...あの ばけものは...！？",
+        "romaji": "Nanda... ano bakemono wa...!?",
+        "english": "What is that monster!?",
+        "note": "なんだ expresses shock: 'what is it?' or 'what the...'"
+      },
+      {
+        "japanese": "あの子が...あの怪物と戦うのか...！？",
+        "reading": "あのこが...あの かいぶつと たたかうのか...！？",
+        "romaji": "Ano ko ga... ano kaibutsu to tatakau no ka...!?",
+        "english": "That child is going to fight that monster!?",
+        "note": "のか turns the statement into an emotional question."
+      },
+      {
+        "japanese": "嘘だろ...生きて帰れるわけがない！！",
+        "reading": "うそだろ...いきて かえれる わけがない！！",
+        "romaji": "Uso daro... ikite kaereru wake ga nai!!",
+        "english": "No way... there is no chance he can make it back alive!",
+        "note": "わけがない means 'there is no reason/chance that...'"
+      },
+      {
+        "japanese": "あれは伝説の深淵の魔獣...！！",
+        "reading": "あれは でんせつの しんえんの まじゅう...！！",
+        "romaji": "Are wa densetsu no shin'en no maju...!!",
+        "english": "That is the legendary beast of the abyss!",
+        "note": "深淵 is a dramatic word for an abyss or deep chasm."
+      },
+      {
+        "japanese": "どう考えても勝てるはずがない...！！",
+        "reading": "どう かんがえても かてる はずがない...！！",
+        "romaji": "Do kangaete mo kateru hazu ga nai...!!",
+        "english": "No matter how you look at it, he cannot possibly win!",
+        "note": "どう考えても means 'however you think about it.' はずがない rejects the possibility."
+      },
+      {
+        "japanese": "なんてことをしやがるんだシャークキング...！！",
+        "reading": "なんてことを しやがるんだ シャークキング...！！",
+        "romaji": "Nante koto o shiyagaru n da Shaku Kingu...!!",
+        "english": "What has Shark King done!?",
+        "note": "しやがる is a hostile, contempt-filled way to describe someone's action."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "化け物",
+        "reading": "ばけもの",
+        "romaji": "bakemono",
+        "meaning": "monster",
+        "note": "A common word for a frightening creature."
+      },
+      {
+        "term": "怪物",
+        "reading": "かいぶつ",
+        "romaji": "kaibutsu",
+        "meaning": "monster; beast",
+        "note": "Slightly more formal than 化け物."
+      },
+      {
+        "term": "戦う",
+        "reading": "たたかう",
+        "romaji": "tatakau",
+        "meaning": "to fight",
+        "note": "Core action verb for battles."
+      },
+      {
+        "term": "嘘だろ",
+        "reading": "うそだろ",
+        "romaji": "uso daro",
+        "meaning": "no way; that cannot be true",
+        "note": "A shocked casual phrase."
+      },
+      {
+        "term": "生きて帰る",
+        "reading": "いきてかえる",
+        "romaji": "ikite kaeru",
+        "meaning": "to return alive",
+        "note": "Combines 生きて with 帰る."
+      },
+      {
+        "term": "伝説",
+        "reading": "でんせつ",
+        "romaji": "densetsu",
+        "meaning": "legend",
+        "note": "Used for legendary beings or stories."
+      },
+      {
+        "term": "深淵",
+        "reading": "しんえん",
+        "romaji": "shin'en",
+        "meaning": "abyss",
+        "note": "A dramatic fantasy word for great depth."
+      },
+      {
+        "term": "魔獣",
+        "reading": "まじゅう",
+        "romaji": "maju",
+        "meaning": "demonic beast; magical beast",
+        "note": "魔 suggests something supernatural or evil."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Abyssal beast reveal",
+        "rect": {
+          "x": 0.02,
+          "y": 0.02,
+          "w": 0.96,
+          "h": 0.65
+        },
+        "scale": 1.35
+      },
+      {
+        "label": "What is that monster",
+        "rect": {
+          "x": 0.02,
+          "y": 0.65,
+          "w": 0.38,
+          "h": 0.15
+        },
+        "scale": 2.25
+      },
+      {
+        "label": "A child must fight it",
+        "rect": {
+          "x": 0.39,
+          "y": 0.65,
+          "w": 0.28,
+          "h": 0.15
+        },
+        "scale": 2.25
+      },
+      {
+        "label": "No one can survive",
+        "rect": {
+          "x": 0.67,
+          "y": 0.65,
+          "w": 0.31,
+          "h": 0.15
+        },
+        "scale": 2.25
+      },
+      {
+        "label": "Legendary abyssal beast",
+        "rect": {
+          "x": 0.02,
+          "y": 0.8,
+          "w": 0.33,
+          "h": 0.19
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Cannot possibly win",
+        "rect": {
+          "x": 0.35,
+          "y": 0.8,
+          "w": 0.3,
+          "h": 0.19
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Shark King accusation",
+        "rect": {
+          "x": 0.65,
+          "y": 0.8,
+          "w": 0.33,
+          "h": 0.19
+        },
+        "scale": 2.3
+      }
+    ]
+  },
+  "metadata": {
+    "storyOrder": "The legendary abyssal beast rises before Rio."
+  }
+}

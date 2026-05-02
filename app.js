@@ -24,12 +24,20 @@ const books = [
     chapterName: "The Shark King",
     accent: "#61c7d8",
     coverBase: "assets/nodeheart-series/nodeheart-luminus/covers",
-    pages: [],
+    pages: [
+      "assets/nodeheart-series/nodeheart-luminus/pages/page-001/metadata.json",
+      "assets/nodeheart-series/nodeheart-luminus/pages/page-002/metadata.json",
+      "assets/nodeheart-series/nodeheart-luminus/pages/page-003/metadata.json",
+      "assets/nodeheart-series/nodeheart-luminus/pages/page-004/metadata.json",
+      "assets/nodeheart-series/nodeheart-luminus/pages/page-005/metadata.json",
+    ],
   },
 ];
 
 const MAX_ZOOM_SCALE = 3;
 const libraryRoot = document.querySelector("[data-library]");
+const pageMetadataCache = new Map();
+const imagePreloadCache = new Set();
 const state = {
   view: "library",
   activeBook: null,
@@ -44,6 +52,72 @@ const state = {
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
+}
+
+function pageMetadataUrl(metadataPath) {
+  return new URL(metadataPath, window.location.href);
+}
+
+function loadPageMetadata(metadataPath) {
+  if (!pageMetadataCache.has(metadataPath)) {
+    const pagePromise = fetch(pageMetadataUrl(metadataPath))
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Could not load ${metadataPath}`);
+        }
+        return response.json();
+      })
+      .then((page) => ({
+        ...page,
+        metadataPath,
+        imageUrl: new URL(page.image, pageMetadataUrl(metadataPath)).toString(),
+      }));
+
+    pageMetadataCache.set(metadataPath, pagePromise);
+  }
+
+  return pageMetadataCache.get(metadataPath);
+}
+
+function preloadImage(url) {
+  if (!url || imagePreloadCache.has(url)) {
+    return;
+  }
+
+  imagePreloadCache.add(url);
+  const image = new Image();
+  image.decoding = "async";
+  image.src = url;
+}
+
+function preloadPageImage(page) {
+  preloadImage(page?.imageUrl);
+}
+
+function preloadPageMetadataAndImage(metadataPath) {
+  loadPageMetadata(metadataPath).then(preloadPageImage).catch(() => {});
+}
+
+function preloadFirstStoryPages() {
+  const warmFirstPages = () => {
+    for (const book of books) {
+      if (book.pages.length > 0) {
+        preloadPageMetadataAndImage(book.pages[0]);
+      }
+    }
+  };
+
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(warmFirstPages, { timeout: 1200 });
+  } else {
+    window.setTimeout(warmFirstPages, 120);
+  }
+}
+
+function preloadReaderNeighbors() {
+  for (const index of [state.pageIndex, state.pageIndex + 1, state.pageIndex - 1]) {
+    preloadPageImage(state.pages[index]);
+  }
 }
 
 function coverSources(book) {
@@ -150,6 +224,7 @@ function renderLibrary() {
   books.forEach((book, index) => list.append(createBookCard(book, index === 0)));
   fragment.append(list);
   libraryRoot.replaceChildren(fragment);
+  preloadFirstStoryPages();
 }
 
 function renderLoading(book) {
@@ -165,21 +240,7 @@ async function openBook(book) {
   renderLoading(book);
 
   try {
-    const pages = await Promise.all(
-      book.pages.map(async (metadataPath) => {
-        const metadataUrl = new URL(metadataPath, window.location.href);
-        const response = await fetch(metadataUrl);
-        if (!response.ok) {
-          throw new Error(`Could not load ${metadataPath}`);
-        }
-        const page = await response.json();
-        return {
-          ...page,
-          metadataPath,
-          imageUrl: new URL(page.image, metadataUrl).toString(),
-        };
-      }),
-    );
+    const pages = await Promise.all(book.pages.map(loadPageMetadata));
 
     state.view = "reader";
     state.activeBook = book;
@@ -566,6 +627,7 @@ function renderReader() {
   }
 
   libraryRoot.replaceChildren(reader);
+  preloadReaderNeighbors();
 }
 
 document.addEventListener("keydown", (event) => {

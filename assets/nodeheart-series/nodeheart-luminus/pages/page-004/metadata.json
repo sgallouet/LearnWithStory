@@ -1,0 +1,186 @@
+{
+  "laneId": "nodeheart-series",
+  "laneName": "Nodeheart Series",
+  "bookId": "nodeheart-luminus",
+  "chapterNumber": "01",
+  "chapterName": "The Shark King",
+  "chapter": "Chapter 01: The Shark King",
+  "pageId": "page-004",
+  "pageNumber": 4,
+  "pageTitle": "Special Match Announced",
+  "displayTitle": "Special Match Announced",
+  "image": "page-004-special-match-announced.png",
+  "width": 1023,
+  "height": 1537,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "闘技場に、歓声が響き渡った。",
+        "reading": "とうぎじょうに、かんせいが ひびきわたった。",
+        "romaji": "Togijo ni, kansei ga hibikiwatatta.",
+        "english": "The cheers echoed throughout the arena.",
+        "note": "響き渡る means a sound spreads or resounds across a place."
+      },
+      {
+        "japanese": "海の戦士たちよ！本日の特別試合を発表する！",
+        "reading": "うみの せんしたちよ！ほんじつの とくべつしあいを はっぴょうする！",
+        "romaji": "Umi no senshi-tachi yo! Honjitsu no tokubetsu shiai o happyo suru!",
+        "english": "Warriors of the sea! I will announce today's special match!",
+        "note": "たち makes 戦士 plural. 本日 is a formal way to say 'today.'"
+      },
+      {
+        "japanese": "生き残った者だけが、姉を救う権利を得る！健闘を祈る！",
+        "reading": "いきのこった ものだけが、あねを すくう けんりを える！けんとうを いのる！",
+        "romaji": "Ikinokotta mono dake ga, ane o sukuu kenri o eru! Kento o inoru!",
+        "english": "Only the one who survives will earn the right to save his sister! May your strength be with you!",
+        "note": "者 is a formal word for person. 権利を得る means 'gain the right.'"
+      },
+      {
+        "japanese": "オオオオオ！！",
+        "reading": "オオオオオ！！",
+        "romaji": "Ooooo!!",
+        "english": "The crowd roars!",
+        "note": "Long vowel sound effects stretch the sound dramatically."
+      },
+      {
+        "japanese": "戦えーっ！！始めろーっ！！",
+        "reading": "たたかえーっ！！はじめろーっ！！",
+        "romaji": "Tatakae!! Hajimero!!",
+        "english": "Fight! Start!",
+        "note": "Both are command forms shouted by the crowd."
+      },
+      {
+        "japanese": "ギロ...",
+        "reading": "ギロ...",
+        "romaji": "Giro...",
+        "english": "A sharp glare...",
+        "note": "ギロ is a sound effect for staring or glaring intensely."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "歓声",
+        "reading": "かんせい",
+        "romaji": "kansei",
+        "meaning": "cheers; shout of joy",
+        "note": "Used for crowd noise at events."
+      },
+      {
+        "term": "響き渡る",
+        "reading": "ひびきわたる",
+        "romaji": "hibikiwataru",
+        "meaning": "to echo throughout",
+        "note": "A vivid verb for sound filling a space."
+      },
+      {
+        "term": "戦士",
+        "reading": "せんし",
+        "romaji": "senshi",
+        "meaning": "warrior",
+        "note": "A common fantasy word."
+      },
+      {
+        "term": "本日",
+        "reading": "ほんじつ",
+        "romaji": "honjitsu",
+        "meaning": "today",
+        "note": "More formal than 今日."
+      },
+      {
+        "term": "特別試合",
+        "reading": "とくべつしあい",
+        "romaji": "tokubetsu shiai",
+        "meaning": "special match",
+        "note": "特別 means special; 試合 means match."
+      },
+      {
+        "term": "発表する",
+        "reading": "はっぴょうする",
+        "romaji": "happyo suru",
+        "meaning": "to announce",
+        "note": "A common する verb."
+      },
+      {
+        "term": "権利",
+        "reading": "けんり",
+        "romaji": "kenri",
+        "meaning": "right; privilege",
+        "note": "Here it means the right to save his sister."
+      },
+      {
+        "term": "健闘",
+        "reading": "けんとう",
+        "romaji": "kento",
+        "meaning": "good fight; brave effort",
+        "note": "健闘を祈る is a set phrase like 'best of luck.'"
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Arena cheers echo",
+        "rect": {
+          "x": 0.02,
+          "y": 0.02,
+          "w": 0.96,
+          "h": 0.35
+        },
+        "scale": 1.55
+      },
+      {
+        "label": "Special match announcement",
+        "rect": {
+          "x": 0.02,
+          "y": 0.37,
+          "w": 0.96,
+          "h": 0.27
+        },
+        "scale": 1.7
+      },
+      {
+        "label": "Crowd roars",
+        "rect": {
+          "x": 0.02,
+          "y": 0.64,
+          "w": 0.96,
+          "h": 0.15
+        },
+        "scale": 1.9
+      },
+      {
+        "label": "Survival rule",
+        "rect": {
+          "x": 0.02,
+          "y": 0.79,
+          "w": 0.42,
+          "h": 0.2
+        },
+        "scale": 2.2
+      },
+      {
+        "label": "Rio steels himself",
+        "rect": {
+          "x": 0.43,
+          "y": 0.79,
+          "w": 0.31,
+          "h": 0.2
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Hidden eye watches",
+        "rect": {
+          "x": 0.74,
+          "y": 0.79,
+          "w": 0.24,
+          "h": 0.2
+        },
+        "scale": 2.3
+      }
+    ]
+  },
+  "metadata": {
+    "storyOrder": "The arena announces the survival match and something watches Rio."
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "laneId": "nodeheart-series",
+  "laneName": "Nodeheart Series",
+  "bookId": "nodeheart-luminus",
+  "chapterNumber": "01",
+  "chapterName": "The Shark King",
+  "chapter": "Chapter 01: The Shark King",
+  "pageId": "page-003",
+  "pageNumber": 3,
+  "pageTitle": "Prison Beneath the Arena",
+  "displayTitle": "Prison Beneath the Arena",
+  "image": "page-003-prison-beneath-arena.png",
+  "width": 1024,
+  "height": 1536,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "闘技場の下には、サメたちの牢獄があった。",
+        "reading": "とうぎじょうの したには、サメたちの ろうごくが あった。",
+        "romaji": "Togijo no shita ni wa, same-tachi no rogoku ga atta.",
+        "english": "Beneath the arena, there was a prison where the sharks kept captives.",
+        "note": "下には sets the location: 'beneath...' or 'under...'"
+      },
+      {
+        "japanese": "その奥で、聞き覚えのある歌声が聞こえた...",
+        "reading": "その おくで、ききおぼえの ある うたごえが きこえた...",
+        "romaji": "Sono oku de, kikioboe no aru utagoe ga kikoeta...",
+        "english": "Deeper inside, he heard a voice, a song he knew too well...",
+        "note": "聞き覚えのある means something sounds familiar because you remember hearing it before."
+      },
+      {
+        "japanese": "そこには、姉ちゃんがいた...！",
+        "reading": "そこには、ねえちゃんが いた...！",
+        "romaji": "Soko ni wa, nee-chan ga ita...!",
+        "english": "There she was, his sister!",
+        "note": "いた is the past tense of いる, used for people and living things."
+      },
+      {
+        "japanese": "リオ！？来ちゃだめ！",
+        "reading": "リオ！？きちゃ だめ！",
+        "romaji": "Rio!? Kicha dame!",
+        "english": "Rio!? You should not be here!",
+        "note": "来ちゃだめ is casual speech for 来てはだめ, 'you must not come.'"
+      },
+      {
+        "japanese": "姉ちゃんを必ず助ける！",
+        "reading": "ねえちゃんを かならず たすける！",
+        "romaji": "Nee-chan o kanarazu tasukeru!",
+        "english": "I swear I will save you!",
+        "note": "必ず means 'certainly' or 'without fail.'"
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "下",
+        "reading": "した",
+        "romaji": "shita",
+        "meaning": "under; below",
+        "note": "A basic location word."
+      },
+      {
+        "term": "牢獄",
+        "reading": "ろうごく",
+        "romaji": "rogoku",
+        "meaning": "prison",
+        "note": "A dramatic word for a jail or dungeon."
+      },
+      {
+        "term": "奥",
+        "reading": "おく",
+        "romaji": "oku",
+        "meaning": "deep inside; inner part",
+        "note": "Used for the back or depth of a place."
+      },
+      {
+        "term": "聞き覚え",
+        "reading": "ききおぼえ",
+        "romaji": "kikioboe",
+        "meaning": "a remembered sound",
+        "note": "Often used in 聞き覚えがある, 'sounds familiar.'"
+      },
+      {
+        "term": "歌声",
+        "reading": "うたごえ",
+        "romaji": "utagoe",
+        "meaning": "singing voice",
+        "note": "歌 plus 声 means the sound of singing."
+      },
+      {
+        "term": "来ちゃだめ",
+        "reading": "きちゃだめ",
+        "romaji": "kicha dame",
+        "meaning": "do not come",
+        "note": "A casual contraction of 来てはだめ."
+      },
+      {
+        "term": "必ず",
+        "reading": "かならず",
+        "romaji": "kanarazu",
+        "meaning": "certainly; without fail",
+        "note": "A strong promise marker."
+      },
+      {
+        "term": "助ける",
+        "reading": "たすける",
+        "romaji": "tasukeru",
+        "meaning": "to help; rescue",
+        "note": "A key rescue-story verb."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Prison beneath the arena",
+        "rect": {
+          "x": 0.02,
+          "y": 0.02,
+          "w": 0.96,
+          "h": 0.35
+        },
+        "scale": 1.55
+      },
+      {
+        "label": "Familiar song deeper inside",
+        "rect": {
+          "x": 0.02,
+          "y": 0.37,
+          "w": 0.47,
+          "h": 0.31
+        },
+        "scale": 1.95
+      },
+      {
+        "label": "His sister in the bubble",
+        "rect": {
+          "x": 0.49,
+          "y": 0.37,
+          "w": 0.49,
+          "h": 0.31
+        },
+        "scale": 1.95
+      },
+      {
+        "label": "Rio should not be here",
+        "rect": {
+          "x": 0.02,
+          "y": 0.69,
+          "w": 0.49,
+          "h": 0.29
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Rio promises rescue",
+        "rect": {
+          "x": 0.51,
+          "y": 0.69,
+          "w": 0.47,
+          "h": 0.29
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "storyOrder": "Rio reaches the prison beneath the arena and finds his sister."
+  }
+}
