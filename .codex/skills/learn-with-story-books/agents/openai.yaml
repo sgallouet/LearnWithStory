@@ -1,4 +1,4 @@
 interface:
   display_name: "Learn With Story Books"
   short_description: "Maintain LearnWithStory book and page workflows"
-  default_prompt: "Use -with-story-books to add or update a LearnWithStory book or page."
+  default_prompt: "Use $learn-with-story-books to add or update a LearnWithStory book or page."

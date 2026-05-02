@@ -1,8 +1,11 @@
 {
   "laneId": "contextual-situation",
+  "laneName": "Contextual Situation",
   "bookId": "ramen-quest",
   "pageId": "page-001",
-  "chapter": "Chapter 1: The First Bowl",
+  "chapterNumber": "01",
+  "chapterName": "The First Bowl",
+  "chapter": "Chapter 01: The First Bowl",
   "image": null,
   "metadata": {}
 }

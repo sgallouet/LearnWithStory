@@ -1,85 +1,72 @@
 ---
 name: learn-with-story-books
-description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+description: Maintain the LearnWithStory static book workflow. Use when Codex needs to add or update a book, cover, page, chapter label, universe lore folder, story outline, or book-generation data in this repository.
 ---
 
 # Learn With Story Books
 
 ## Overview
 
-[TODO: 1-2 sentences explaining what this skill enables]
+Use this skill to keep LearnWithStory books consistent across the static UI, asset folders, and hidden generation data. The public UI is intentionally minimal: one centered list of book covers, each with the label `{laneName} - CHAPTER {chapterNumber} - {chapterName}`.
 
-## Structuring This Skill
+## Project Shape
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+Book folders live at:
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" -> "Reading" -> "Creating" -> "Editing"
-- Structure: ## Overview -> ## Workflow Decision Tree -> ## Step 1 -> ## Step 2...
+```text
+assets/{laneId}/{bookId}/
+  covers/
+  pages/
+    page-001/
+      metadata.json
+  universe/
+    characters/
+    places/
+    monsters/
+  story/
+```
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" -> "Merge PDFs" -> "Split PDFs" -> "Extract Text"
-- Structure: ## Overview -> ## Quick Start -> ## Task Category 1 -> ## Task Category 2...
+Keep `universe/` and `story/` out of the UI. They are private source material for generating the book: character notes, places, monsters, lore, plot summaries, outlines, and continuity notes.
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" -> "Colors" -> "Typography" -> "Features"
-- Structure: ## Overview -> ## Guidelines -> ## Specifications -> ## Usage...
+## App Data
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" -> numbered capability list
-- Structure: ## Overview -> ## Core Capabilities -> ### 1. Feature -> ### 2. Feature...
+Update `app.js` when the visible book list changes. Each book entry must include:
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+```js
+{
+  id: "book-id",
+  laneId: "lane-id",
+  laneName: "Lane Name",
+  title: "DISPLAY TITLE",
+  chapterNumber: "01",
+  chapterName: "Chapter Name",
+  accent: "#hex",
+  coverBase: "assets/lane-id/book-id/covers",
+}
+```
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+Do not reintroduce lane rails or lane headings unless the user explicitly asks. The visible label is generated from `laneName`, `chapterNumber`, and `chapterName`.
 
-## [TODO: Replace with the first main section based on chosen structure]
+## Add A Book
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
+1. Choose kebab-case `laneId` and `bookId`.
+2. Create `covers/`, `pages/page-001/`, `universe/characters/`, `universe/places/`, `universe/monsters/`, and `story/`.
+3. Add cover assets using the established filenames when possible: `cover-original.png`, `cover-480`, `cover-720`, `cover-960`, and `cover-1086` in `.jpg` and `.webp`.
+4. Create `pages/page-001/metadata.json` with `laneId`, `laneName`, `bookId`, `pageId`, `chapterNumber`, `chapterName`, `chapter`, `image`, and `metadata`.
+5. Add one entry to `app.js` so the book appears in the single cover list.
+6. If the new book becomes the first visible book, update the preload image in `index.html`.
 
-## Resources (optional)
+## Add A Page
 
-Create only the resource directories this skill actually needs. Delete this section if no resources are required.
+1. Find the next page number under `pages/` and create `page-XXX/`.
+2. Add `metadata.json` with the same schema as existing pages.
+3. Put generated page images or page-specific assets in that page folder.
+4. Only update `app.js` if the visible chapter label should change to this page or chapter.
 
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
+## Add Universe Or Story Data
 
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
+Use focused Markdown or JSON files. Prefer one file per character, place, monster, concept, or story outline section so future generation can load only the relevant material. Keep names kebab-case and descriptive.
 
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
+## Verification
 
-**Note:** Scripts may be executed without loading into context, but can still be read by Codex for patching or environment adjustments.
-
-### references/
-Documentation and reference material intended to be loaded into context to inform Codex's process and thinking.
-
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
-
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Codex should reference while working.
-
-### assets/
-Files not intended to be loaded into context, but rather used within the output Codex produces.
-
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
-
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
-
----
-
-**Not every skill requires all three types of resources.**
+Validate JSON before finishing. For UI changes, open or serve `index.html` and confirm only the cover list and centered labels are visible.

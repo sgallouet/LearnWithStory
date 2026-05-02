@@ -1,33 +1,27 @@
-const lanes = [
+const books = [
   {
-    id: "contextual-situation",
-    title: "Contextual Situation",
-    books: [
-      {
-        id: "ramen-quest",
-        title: "RAMEN QUEST",
-        chapter: "Chapter 1: The First Bowl",
-        accent: "#e2ad54",
-        coverBase: "assets/contextual-situation/ramen-quest/covers",
-      },
-    ],
+    id: "ramen-quest",
+    laneId: "contextual-situation",
+    laneName: "Contextual Situation",
+    title: "RAMEN QUEST",
+    chapterNumber: "01",
+    chapterName: "The First Bowl",
+    accent: "#e2ad54",
+    coverBase: "assets/contextual-situation/ramen-quest/covers",
   },
   {
-    id: "nodeheart-series",
-    title: "Nodeheart Series",
-    books: [
-      {
-        id: "nodeheart-luminus",
-        title: "NODEHEART LUMINUS",
-        chapter: "Chapter 1: The Shark King",
-        accent: "#61c7d8",
-        coverBase: "assets/nodeheart-series/nodeheart-luminus/covers",
-      },
-    ],
+    id: "nodeheart-luminus",
+    laneId: "nodeheart-series",
+    laneName: "Nodeheart Series",
+    title: "NODEHEART LUMINUS",
+    chapterNumber: "01",
+    chapterName: "The Shark King",
+    accent: "#61c7d8",
+    coverBase: "assets/nodeheart-series/nodeheart-luminus/covers",
   },
 ];
 
-const railRoot = document.querySelector("[data-rails]");
+const libraryRoot = document.querySelector("[data-library]");
 
 function coverSources(book) {
   return {
@@ -56,7 +50,7 @@ function createCoverPicture(book, loading) {
 
   webp.type = "image/webp";
   webp.srcset = sources.webp;
-  webp.sizes = "(max-width: 700px) 82vw, (max-width: 1100px) 44vw, 460px";
+  webp.sizes = "(max-width: 760px) 84vw, 430px";
 
   jpg.type = "image/jpeg";
   jpg.srcset = sources.jpg;
@@ -74,61 +68,37 @@ function createCoverPicture(book, loading) {
   return picture;
 }
 
+function bookLabel(book) {
+  return `${book.laneName} - CHAPTER ${book.chapterNumber} - ${book.chapterName}`;
+}
+
 function createBookCard(book, isFirstBook) {
-  const card = document.createElement("button");
+  const card = document.createElement("li");
   card.className = "book-card";
-  card.type = "button";
   card.dataset.bookId = book.id;
   card.style.setProperty("--book-accent", book.accent);
-  card.setAttribute("aria-label", `${book.title}, ${book.chapter}`);
-  card.setAttribute("aria-pressed", String(isFirstBook));
 
   const cover = document.createElement("span");
   cover.className = "cover-shell";
   cover.append(createCoverPicture(book, isFirstBook ? "eager" : "lazy"));
 
   const chapter = document.createElement("span");
-  chapter.className = "book-chapter";
-  chapter.textContent = book.chapter;
+  chapter.className = "book-label";
+  chapter.textContent = bookLabel(book);
 
   card.append(cover, chapter);
-  card.addEventListener("click", () => selectBook(card));
   return card;
-}
-
-function createRail(lane, laneIndex) {
-  const section = document.createElement("section");
-  section.className = "rail";
-  section.setAttribute("aria-labelledby", `${lane.id}-title`);
-
-  const title = document.createElement("h2");
-  title.className = "rail-title";
-  title.id = `${lane.id}-title`;
-  title.textContent = lane.title;
-
-  const track = document.createElement("div");
-  track.className = "rail-track";
-  track.setAttribute("aria-label", lane.title);
-  track.setAttribute("tabindex", "0");
-
-  lane.books.forEach((book, bookIndex) => {
-    track.append(createBookCard(book, laneIndex === 0 && bookIndex === 0));
-  });
-
-  section.append(title, track);
-  return section;
-}
-
-function selectBook(selectedCard) {
-  document.querySelectorAll(".book-card").forEach((card) => {
-    card.setAttribute("aria-pressed", String(card === selectedCard));
-  });
 }
 
 function renderLibrary() {
   const fragment = document.createDocumentFragment();
-  lanes.forEach((lane, index) => fragment.append(createRail(lane, index)));
-  railRoot.replaceChildren(fragment);
+  const list = document.createElement("ul");
+  list.className = "book-list";
+  list.setAttribute("aria-label", "Book covers");
+
+  books.forEach((book, index) => list.append(createBookCard(book, index === 0)));
+  fragment.append(list);
+  libraryRoot.replaceChildren(fragment);
 }
 
 renderLibrary();

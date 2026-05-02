@@ -1,8 +1,11 @@
 {
   "laneId": "nodeheart-series",
+  "laneName": "Nodeheart Series",
   "bookId": "nodeheart-luminus",
   "pageId": "page-001",
-  "chapter": "Chapter 1: The Shark King",
+  "chapterNumber": "01",
+  "chapterName": "The Shark King",
+  "chapter": "Chapter 01: The Shark King",
   "image": null,
   "metadata": {}
 }
