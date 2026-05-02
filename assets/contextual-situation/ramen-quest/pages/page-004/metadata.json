@@ -106,39 +106,73 @@
     "points": [
       {
         "label": "Thank you for the meal",
-        "x": 0.4,
-        "y": 0.13,
-        "scale": 2.05
+        "rect": {
+          "x": 0.02,
+          "y": 0.03,
+          "w": 0.7,
+          "h": 0.22
+        },
+        "scale": 1.95
       },
       {
         "label": "Asking the bill",
-        "x": 0.28,
-        "y": 0.36,
-        "scale": 2.35
+        "rect": {
+          "x": 0.02,
+          "y": 0.27,
+          "w": 0.48,
+          "h": 0.22
+        },
+        "scale": 2.2
       },
       {
         "label": "Here you are",
-        "x": 0.75,
-        "y": 0.36,
-        "scale": 2.35
+        "rect": {
+          "x": 0.51,
+          "y": 0.27,
+          "w": 0.47,
+          "h": 0.22
+        },
+        "scale": 2.2
       },
       {
         "label": "Come again",
-        "x": 0.5,
-        "y": 0.57,
-        "scale": 2.25
+        "rect": {
+          "x": 0.02,
+          "y": 0.5,
+          "w": 0.48,
+          "h": 0.22
+        },
+        "scale": 2.2
       },
       {
         "label": "Leaving the shop",
-        "x": 0.27,
-        "y": 0.83,
-        "scale": 2
+        "rect": {
+          "x": 0.51,
+          "y": 0.5,
+          "w": 0.47,
+          "h": 0.22
+        },
+        "scale": 2.15
+      },
+      {
+        "label": "Awesome ramen shop",
+        "rect": {
+          "x": 0.02,
+          "y": 0.75,
+          "w": 0.48,
+          "h": 0.22
+        },
+        "scale": 2.1
       },
       {
         "label": "Next flavor",
-        "x": 0.78,
-        "y": 0.83,
-        "scale": 2.35
+        "rect": {
+          "x": 0.51,
+          "y": 0.75,
+          "w": 0.47,
+          "h": 0.22
+        },
+        "scale": 2.2
       }
     ]
   },

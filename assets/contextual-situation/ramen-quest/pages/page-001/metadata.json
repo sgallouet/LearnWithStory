@@ -77,34 +77,54 @@
   "zoom": {
     "points": [
       {
-        "label": "Page title",
-        "x": 0.18,
-        "y": 0.06,
-        "scale": 2.35
-      },
-      {
-        "label": "Shop sign and first thought",
-        "x": 0.3,
-        "y": 0.28,
+        "label": "Opening thought",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.53,
+          "h": 0.43
+        },
         "scale": 2.15
       },
       {
-        "label": "Let's go in",
-        "x": 0.64,
-        "y": 0.56,
+        "label": "Ramen shop front",
+        "rect": {
+          "x": 0.44,
+          "y": 0.02,
+          "w": 0.54,
+          "h": 0.43
+        },
+        "scale": 2.05
+      },
+      {
+        "label": "Let's try it",
+        "rect": {
+          "x": 0.58,
+          "y": 0.48,
+          "w": 0.39,
+          "h": 0.23
+        },
         "scale": 2.35
       },
       {
         "label": "Entering the shop",
-        "x": 0.25,
-        "y": 0.84,
-        "scale": 2.5
+        "rect": {
+          "x": 0.02,
+          "y": 0.75,
+          "w": 0.48,
+          "h": 0.23
+        },
+        "scale": 2.2
       },
       {
-        "label": "Sliding door detail",
-        "x": 0.76,
-        "y": 0.84,
-        "scale": 2.65
+        "label": "Sliding door",
+        "rect": {
+          "x": 0.51,
+          "y": 0.75,
+          "w": 0.47,
+          "h": 0.23
+        },
+        "scale": 2.3
       }
     ]
   },

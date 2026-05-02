@@ -156,7 +156,6 @@ img {
 
 .book-card:focus-visible,
 .reader-icon-button:focus-visible,
-.reader-nav:focus-visible,
 .reader-action:focus-visible,
 .lesson-chip:focus-visible {
   outline: 2px solid color-mix(in srgb, var(--book-accent, var(--gold)) 78%, white 12%);
@@ -217,7 +216,7 @@ img {
   place-items: center;
   overflow: hidden;
   transform-origin: 0 0;
-  transition: transform 260ms ease;
+  transition: transform 150ms cubic-bezier(0.2, 0.8, 0.24, 1);
   will-change: transform;
 }
 
@@ -230,8 +229,7 @@ img {
 }
 
 .reader-topbar,
-.reader-controls,
-.reader-nav {
+.reader-controls {
   position: fixed;
   z-index: 3;
 }
@@ -244,22 +242,7 @@ img {
   gap: 10px;
 }
 
-.reader-page-status,
-.zoom-point-label {
-  min-height: 34px;
-  padding: 7px 11px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 8px;
-  background: rgba(5, 5, 5, 0.56);
-  color: var(--text);
-  font-size: 0.92rem;
-  font-weight: 760;
-  line-height: 1.2;
-  backdrop-filter: blur(12px);
-}
-
 .reader-icon-button,
-.reader-nav,
 .reader-action {
   display: grid;
   place-items: center;
@@ -280,35 +263,12 @@ img {
   height: 42px;
 }
 
-.reader-nav {
-  top: 50%;
-  width: 46px;
-  height: 66px;
-  transform: translateY(-50%);
-}
-
-.reader-nav-left {
-  left: 14px;
-}
-
-.reader-nav-right {
-  right: 14px;
-}
-
-.reader-nav:disabled {
-  display: none;
-}
-
 .reader-controls {
   right: 16px;
   bottom: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.zoom-point-label:empty {
-  display: none;
 }
 
 .lesson-overlay {
@@ -471,30 +431,10 @@ img {
     bottom: 10px;
   }
 
-  .reader-nav {
-    width: 38px;
-    height: 58px;
-  }
-
-  .reader-nav-left {
-    left: 8px;
-  }
-
-  .reader-nav-right {
-    right: 8px;
-  }
-
   .reader-icon-button,
   .reader-action {
     width: 40px;
     height: 40px;
-  }
-
-  .reader-page-status,
-  .zoom-point-label {
-    min-height: 32px;
-    padding: 7px 10px;
-    font-size: 0.84rem;
   }
 
   .lesson-overlay {

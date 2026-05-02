@@ -105,40 +105,84 @@
   "zoom": {
     "points": [
       {
-        "label": "Title and menu",
-        "x": 0.52,
-        "y": 0.12,
-        "scale": 2
-      },
-      {
-        "label": "Topping choices",
-        "x": 0.6,
-        "y": 0.31,
+        "label": "Toppings setup",
+        "rect": {
+          "x": 0.01,
+          "y": 0.01,
+          "w": 0.47,
+          "h": 0.3
+        },
         "scale": 2.2
       },
       {
+        "label": "Menu signs",
+        "rect": {
+          "x": 0.33,
+          "y": 0.02,
+          "w": 0.65,
+          "h": 0.21
+        },
+        "scale": 1.9
+      },
+      {
+        "label": "Topping tray",
+        "rect": {
+          "x": 0.25,
+          "y": 0.26,
+          "w": 0.72,
+          "h": 0.1
+        },
+        "scale": 1.9
+      },
+      {
         "label": "Ordering toppings",
-        "x": 0.5,
-        "y": 0.49,
-        "scale": 2.35
+        "rect": {
+          "x": 0.25,
+          "y": 0.37,
+          "w": 0.25,
+          "h": 0.21
+        },
+        "scale": 2.6
+      },
+      {
+        "label": "Good choice",
+        "rect": {
+          "x": 0.5,
+          "y": 0.37,
+          "w": 0.47,
+          "h": 0.21
+        },
+        "scale": 2.15
       },
       {
         "label": "Ramen arrives",
-        "x": 0.62,
-        "y": 0.66,
-        "scale": 2.3
+        "rect": {
+          "x": 0.03,
+          "y": 0.58,
+          "w": 0.94,
+          "h": 0.2
+        },
+        "scale": 1.75
       },
       {
         "label": "Looks delicious",
-        "x": 0.27,
-        "y": 0.88,
-        "scale": 2.35
+        "rect": {
+          "x": 0.02,
+          "y": 0.78,
+          "w": 0.5,
+          "h": 0.2
+        },
+        "scale": 2.25
       },
       {
         "label": "Let's eat",
-        "x": 0.74,
-        "y": 0.88,
-        "scale": 2.35
+        "rect": {
+          "x": 0.51,
+          "y": 0.78,
+          "w": 0.47,
+          "h": 0.2
+        },
+        "scale": 2.25
       }
     ]
   },

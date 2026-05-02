@@ -28,6 +28,7 @@ const books = [
   },
 ];
 
+const MAX_ZOOM_SCALE = 3;
 const libraryRoot = document.querySelector("[data-library]");
 const state = {
   view: "library",
@@ -217,6 +218,70 @@ function currentZoomPoint() {
   return points[state.zoomIndex] || points[0] || { x: 0.5, y: 0.5, scale: 2.2 };
 }
 
+function computePageFrame(page, point = currentZoomPoint()) {
+  const viewportWidth = window.visualViewport?.width || window.innerWidth;
+  const viewportHeight = window.visualViewport?.height || window.innerHeight;
+  const imageRatio = page.width / page.height;
+  let displayWidth = viewportWidth;
+  let displayHeight = displayWidth / imageRatio;
+
+  if (displayHeight > viewportHeight) {
+    displayHeight = viewportHeight;
+    displayWidth = displayHeight * imageRatio;
+  }
+
+  if (!state.zoomed) {
+    return {
+      displayWidth,
+      displayHeight,
+      transform: "matrix(1, 0, 0, 1, 0, 0)",
+    };
+  }
+
+  const region = point.rect || point.frame || null;
+  const regionCenterX = region ? region.x + region.w / 2 : point.x;
+  const regionCenterY = region ? region.y + region.h / 2 : point.y;
+  let scale = Math.min(point.scale || 2.2, MAX_ZOOM_SCALE);
+
+  if (region) {
+    const paddedViewportWidth = viewportWidth * (point.fitWidth || 0.9);
+    const paddedViewportHeight = viewportHeight * (point.fitHeight || 0.86);
+    const fitScale = Math.min(
+      paddedViewportWidth / (region.w * displayWidth),
+      paddedViewportHeight / (region.h * displayHeight),
+    );
+    scale = Math.min(fitScale, scale, MAX_ZOOM_SCALE);
+  }
+
+  const scaledWidth = displayWidth * scale;
+  const scaledHeight = displayHeight * scale;
+  const baseLeft = (viewportWidth - displayWidth) / 2;
+  const baseTop = (viewportHeight - displayHeight) / 2;
+  const visualLeft = viewportWidth / 2 - regionCenterX * scaledWidth;
+  const visualTop = viewportHeight / 2 - regionCenterY * scaledHeight;
+  const translateX = visualLeft - baseLeft;
+  const translateY = visualTop - baseTop;
+
+  return {
+    displayWidth,
+    displayHeight,
+    transform: `matrix(${scale}, 0, 0, ${scale}, ${translateX}, ${translateY})`,
+  };
+}
+
+function applyCurrentZoomFrame() {
+  const frame = document.querySelector(".page-frame");
+  if (!frame) {
+    return false;
+  }
+
+  const layout = computePageFrame(currentPage());
+  frame.style.width = `${layout.displayWidth}px`;
+  frame.style.height = `${layout.displayHeight}px`;
+  frame.style.transform = layout.transform;
+  return true;
+}
+
 function controlsIntroKey(book) {
   return `learn-with-story:controls-seen:${book.id}`;
 }
@@ -260,7 +325,10 @@ function setZoomPoint(delta) {
 
   if (nextIndex >= 0 && nextIndex < points.length) {
     state.zoomIndex = nextIndex;
-    renderReader();
+    state.overlayOpen = false;
+    if (!applyCurrentZoomFrame()) {
+      renderReader();
+    }
     return;
   }
 
@@ -346,19 +414,10 @@ function handlePointerEnd(event) {
 function createReaderImage(page) {
   const frame = document.createElement("div");
   frame.className = "page-frame";
-  const viewportWidth = window.visualViewport?.width || window.innerWidth;
-  const viewportHeight = window.visualViewport?.height || window.innerHeight;
-  const imageRatio = page.width / page.height;
-  let displayWidth = viewportWidth;
-  let displayHeight = displayWidth / imageRatio;
-
-  if (displayHeight > viewportHeight) {
-    displayHeight = viewportHeight;
-    displayWidth = displayHeight * imageRatio;
-  }
-
-  frame.style.width = `${displayWidth}px`;
-  frame.style.height = `${displayHeight}px`;
+  const layout = computePageFrame(page);
+  frame.style.width = `${layout.displayWidth}px`;
+  frame.style.height = `${layout.displayHeight}px`;
+  frame.style.transform = layout.transform;
 
   const img = document.createElement("img");
   img.className = "reader-page-image";
@@ -367,16 +426,6 @@ function createReaderImage(page) {
   img.width = page.width;
   img.height = page.height;
   img.draggable = false;
-
-  if (state.zoomed) {
-    const point = currentZoomPoint();
-    const scale = point.scale || 2.2;
-    const baseLeft = (viewportWidth - displayWidth) / 2;
-    const baseTop = (viewportHeight - displayHeight) / 2;
-    const translateX = viewportWidth / 2 - baseLeft - point.x * displayWidth * scale;
-    const translateY = viewportHeight / 2 - baseTop - point.y * displayHeight * scale;
-    frame.style.transform = `matrix(${scale}, 0, 0, ${scale}, ${translateX}, ${translateY})`;
-  }
 
   frame.append(img);
   return frame;
@@ -424,7 +473,7 @@ function createControlsIntro() {
   for (const text of [
     "Swipe left or right, or use arrow keys, to turn pages.",
     "Swipe up-left to open Japanese help.",
-    "Use zoom for guided close-ups. In zoom mode, left and right move through focus points.",
+    "Use zoom for guided close-ups. In zoom mode, left and right move through fitted reading frames.",
     "Use the bottom-right fullscreen button for a cleaner phone view.",
   ]) {
     const item = document.createElement("li");
@@ -496,19 +545,6 @@ function renderReader() {
   stage.addEventListener("pointerup", handlePointerEnd);
   stage.append(createReaderImage(page));
 
-  const previous = createButton("reader-nav reader-nav-left", state.zoomed ? "Previous zoom point" : "Previous page", "<");
-  previous.disabled = state.zoomed
-    ? state.pageIndex === 0 && state.zoomIndex === 0
-    : state.pageIndex === 0;
-  previous.addEventListener("click", () => setPage(-1));
-
-  const next = createButton("reader-nav reader-nav-right", state.zoomed ? "Next zoom point" : "Next page", ">");
-  const pointCount = currentPage().zoom?.points?.length || 1;
-  next.disabled = state.zoomed
-    ? state.pageIndex >= state.pages.length - 1 && state.zoomIndex >= pointCount - 1
-    : state.pageIndex >= state.pages.length - 1;
-  next.addEventListener("click", () => setPage(1));
-
   const controls = document.createElement("div");
   controls.className = "reader-controls";
 
@@ -519,7 +555,7 @@ function renderReader() {
   fullscreen.addEventListener("click", toggleFullscreen);
 
   controls.append(zoom, fullscreen);
-  reader.append(topBar, stage, previous, next, controls);
+  reader.append(topBar, stage, controls);
 
   if (state.overlayOpen) {
     reader.append(createLearningOverlay(page));

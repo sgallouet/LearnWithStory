@@ -94,8 +94,12 @@ Each `pages/page-XXX/metadata.json` must describe both the image and the reader 
     "points": [
       {
         "label": "Focus label",
-        "x": 0.5,
-        "y": 0.5,
+        "rect": {
+          "x": 0.1,
+          "y": 0.1,
+          "w": 0.35,
+          "h": 0.2
+        },
         "scale": 2.3
       }
     ]
@@ -104,7 +108,7 @@ Each `pages/page-XXX/metadata.json` must describe both the image and the reader 
 }
 ```
 
-Use normalized `x` and `y` values from `0` to `1`, where `(0, 0)` is the top-left of the image and `(1, 1)` is the bottom-right. Choose zoom points by reading the page and centering each important speech bubble, menu, panel, or action beat in a sensible reading order. Use a `scale` that makes Japanese text readable on a phone without forcing manual pinch zoom. Include romaji for both sentence and vocabulary entries.
+Use normalized `rect` values from `0` to `1`, where `(0, 0)` is the top-left of the image and `(1, 1)` is the bottom-right. Choose rectangles by reading the page and framing each important speech bubble, menu, panel, or action beat in a sensible reading order. Avoid redundant adjacent frames that show nearly the same content. The reader fits each rectangle into the viewport; small black margins are acceptable when an edge frame needs to stay centered. Use `scale` as the maximum zoom for that frame, never above `3`. Include romaji for both sentence and vocabulary entries.
 
 ## Add A Book
 
@@ -121,7 +125,7 @@ Use normalized `x` and `y` values from `0` to `1`, where `(0, 0)` is the top-lef
 2. Rename the supplied page image to `page-XXX-short-description.ext`, place it in that folder, and record its exact width and height.
 3. Read the Japanese text in the image. Add sentence explanations for English speakers learning Japanese, including `japanese`, `reading`, `romaji`, `english`, and a compact `note`.
 4. Add vocabulary entries for the main words, phrases, signs, menu items, and sound effects learners should notice. Include `term`, `reading`, `romaji`, `meaning`, and `note`.
-5. Choose guided zoom points in reading order. Include a clear `label`, normalized `x`, normalized `y`, and page-specific `scale`.
+5. Choose guided zoom frames in reading order. Include a clear `label`, normalized `rect` with `x`, `y`, `w`, and `h`, and page-specific maximum `scale` no higher than `3`. Prefer fewer, well-framed regions over many overlapping frames.
 6. Add the metadata path to the book's `pages` array in `app.js`.
 7. Only update the library chapter label if the visible cover should represent a different chapter.
 
@@ -136,7 +140,8 @@ Preserve these interactions when modifying the app:
 5. The learning overlay displays semi-transparent buttons built from `learning.sentences` and `learning.vocabulary`, including kana reading, romaji, English, and a short note.
 6. The fullscreen button stays at the bottom-right of the reader.
 7. Keep persistent reader UI minimal. Do not show a page number counter unless the user asks for it.
-8. The zoom button toggles guided zoom mode. In guided zoom mode, horizontal swipes and keyboard left/right arrows move between `zoom.points`. When the reader passes the final zoom point, continue to zoom point 1 of the next page. When moving backward before the first zoom point, continue to the final zoom point of the previous page.
+8. Do not show persistent left/right arrow buttons in the reader. Navigation should stay gesture and keyboard driven after the tutorial.
+9. The zoom button toggles guided zoom mode. In guided zoom mode, horizontal swipes and keyboard left/right arrows move between `zoom.points`. Each point fits a `rect` frame nicely in the viewport, with a quick animated movement between frames on the same page. When the reader passes the final zoom frame, continue to zoom frame 1 of the next page. When moving backward before the first zoom frame, continue to the final zoom frame of the previous page.
 
 ## Add Universe Or Story Data
 
