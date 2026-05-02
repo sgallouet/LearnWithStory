@@ -1,0 +1,146 @@
+{
+  "laneId": "contextual-situation",
+  "laneName": "Contextual Situation",
+  "bookId": "ramen-quest",
+  "pageId": "page-004",
+  "pageNumber": 4,
+  "pageTitle": "Paying And Farewell",
+  "displayTitle": "ページ4 お会計とお見送り",
+  "chapterNumber": "01",
+  "chapterName": "The First Bowl",
+  "chapter": "Chapter 01: The First Bowl",
+  "image": "page-004-paying-and-farewell.png",
+  "width": 1024,
+  "height": 1536,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "お会計とお見送り",
+        "reading": "おかいけいと おみおくり",
+        "english": "Paying the bill and being seen off",
+        "note": "お adds politeness to 会計 and 見送り.",
+        "romaji": "Okaikei to omiokuri"
+      },
+      {
+        "japanese": "ごちそうさまでした！",
+        "reading": "ごちそうさまでした！",
+        "english": "Thank you for the meal!",
+        "note": "Said after eating to thank the person who prepared or served the meal.",
+        "romaji": "Gochiso-sama deshita!"
+      },
+      {
+        "japanese": "お会計はいくらですか？ / はい、800円です。",
+        "reading": "おかいけいは いくらですか？ / はい、はっぴゃくえんです。",
+        "english": "How much is it? / It's 800 yen.",
+        "note": "いくらですか asks the price.",
+        "romaji": "Okaikei wa ikura desu ka? / Hai, happyaku-en desu."
+      },
+      {
+        "japanese": "はい、どうぞ。 / ありがとう！",
+        "reading": "はい、どうぞ。 / ありがとう！",
+        "english": "Here you are. / Thank you!",
+        "note": "どうぞ is used when offering or handing something to someone.",
+        "romaji": "Hai, dozo. / Arigato!"
+      },
+      {
+        "japanese": "また来てね！おすすめは味噌ラーメンだよ！",
+        "reading": "また きてね！おすすめは みそラーメンだよ！",
+        "english": "Come again! I recommend our miso ramen!",
+        "note": "また来てね is a friendly invitation to come back.",
+        "romaji": "Mata kite ne! Osusume wa miso ramen da yo!"
+      },
+      {
+        "japanese": "次は別の味も試してみよう！",
+        "reading": "つぎは べつの あじも ためしてみよう！",
+        "english": "Next time, I'll try a different flavor too!",
+        "note": "試してみよう means 'let's try' or 'I'll try'.",
+        "romaji": "Tsugi wa betsu no aji mo tameshite miyou!"
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "お会計",
+        "reading": "おかいけい",
+        "meaning": "the bill, checkout",
+        "note": "Used when asking to pay at a restaurant.",
+        "romaji": "okaikei"
+      },
+      {
+        "term": "いくら",
+        "reading": "いくら",
+        "meaning": "how much",
+        "note": "Price question word.",
+        "romaji": "ikura"
+      },
+      {
+        "term": "円",
+        "reading": "えん",
+        "meaning": "yen",
+        "note": "Japanese currency counter.",
+        "romaji": "en"
+      },
+      {
+        "term": "おすすめ",
+        "reading": "おすすめ",
+        "meaning": "recommendation",
+        "note": "Useful when asking staff what they recommend.",
+        "romaji": "osusume"
+      },
+      {
+        "term": "絶対",
+        "reading": "ぜったい",
+        "meaning": "definitely, absolutely",
+        "note": "Adds strong certainty.",
+        "romaji": "zettai"
+      },
+      {
+        "term": "最高",
+        "reading": "さいこう",
+        "meaning": "the best, awesome",
+        "note": "A casual positive reaction.",
+        "romaji": "saiko"
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Thank you for the meal",
+        "x": 0.4,
+        "y": 0.13,
+        "scale": 2.05
+      },
+      {
+        "label": "Asking the bill",
+        "x": 0.28,
+        "y": 0.36,
+        "scale": 2.35
+      },
+      {
+        "label": "Here you are",
+        "x": 0.75,
+        "y": 0.36,
+        "scale": 2.35
+      },
+      {
+        "label": "Come again",
+        "x": 0.5,
+        "y": 0.57,
+        "scale": 2.25
+      },
+      {
+        "label": "Leaving the shop",
+        "x": 0.27,
+        "y": 0.83,
+        "scale": 2
+      },
+      {
+        "label": "Next flavor",
+        "x": 0.78,
+        "y": 0.83,
+        "scale": 2.35
+      }
+    ]
+  },
+  "metadata": {}
+}

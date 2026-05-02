@@ -3,9 +3,110 @@
   "laneName": "Contextual Situation",
   "bookId": "ramen-quest",
   "pageId": "page-001",
+  "pageNumber": 1,
+  "pageTitle": "Ramen Shop Discovery",
+  "displayTitle": "ページ1 ラーメン屋を見つけた！",
   "chapterNumber": "01",
   "chapterName": "The First Bowl",
   "chapter": "Chapter 01: The First Bowl",
-  "image": null,
+  "image": "page-001-ramen-shop-discovery.png",
+  "width": 936,
+  "height": 1681,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "ラーメン屋を見つけた！",
+        "reading": "ラーメンやを みつけた！",
+        "english": "I found a ramen shop!",
+        "note": "見つけた is the casual past form of 見つける, meaning to find.",
+        "romaji": "Ramen-ya o mitsuketa!"
+      },
+      {
+        "japanese": "おっ…なんかいい雰囲気のラーメン屋だな。",
+        "reading": "おっ…なんかいい ふんいきの ラーメンやだな。",
+        "english": "Oh... this ramen shop has a nice vibe.",
+        "note": "なんか is casual 'kind of' or 'somehow'. だな sounds like the speaker is thinking aloud.",
+        "romaji": "O... nanka ii funiki no ramen-ya da na."
+      },
+      {
+        "japanese": "よし、入ってみよう。",
+        "reading": "よし、はいってみよう。",
+        "english": "Alright, let's try going in.",
+        "note": "Verb te-form + みよう means 'let's try doing it'.",
+        "romaji": "Yoshi, haitte miyou."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "ラーメン屋",
+        "reading": "ラーメンや",
+        "meaning": "ramen shop",
+        "note": "屋 means a shop or someone who does a trade.",
+        "romaji": "ramen-ya"
+      },
+      {
+        "term": "見つけた",
+        "reading": "みつけた",
+        "meaning": "found",
+        "note": "Past tense of 見つける.",
+        "romaji": "mitsuketa"
+      },
+      {
+        "term": "雰囲気",
+        "reading": "ふんいき",
+        "meaning": "atmosphere, vibe",
+        "note": "Useful for describing places and mood.",
+        "romaji": "funiki"
+      },
+      {
+        "term": "営業中",
+        "reading": "えいぎょうちゅう",
+        "meaning": "open for business",
+        "note": "Often appears on restaurant signs.",
+        "romaji": "eigyo-chu"
+      },
+      {
+        "term": "スッ / ガラッ",
+        "reading": "すっ / がらっ",
+        "meaning": "smooth movement / sliding door sound",
+        "note": "Manga sound effects for motion and a rattling slide.",
+        "romaji": "su / gara"
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title",
+        "x": 0.18,
+        "y": 0.06,
+        "scale": 2.35
+      },
+      {
+        "label": "Shop sign and first thought",
+        "x": 0.3,
+        "y": 0.28,
+        "scale": 2.15
+      },
+      {
+        "label": "Let's go in",
+        "x": 0.64,
+        "y": 0.56,
+        "scale": 2.35
+      },
+      {
+        "label": "Entering the shop",
+        "x": 0.25,
+        "y": 0.84,
+        "scale": 2.5
+      },
+      {
+        "label": "Sliding door detail",
+        "x": 0.76,
+        "y": 0.84,
+        "scale": 2.65
+      }
+    ]
+  },
   "metadata": {}
 }

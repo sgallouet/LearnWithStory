@@ -1,0 +1,146 @@
+{
+  "laneId": "contextual-situation",
+  "laneName": "Contextual Situation",
+  "bookId": "ramen-quest",
+  "pageId": "page-002",
+  "pageNumber": 2,
+  "pageTitle": "Ordering Tonkotsu",
+  "displayTitle": "ページ2",
+  "chapterNumber": "01",
+  "chapterName": "The First Bowl",
+  "chapter": "Chapter 01: The First Bowl",
+  "image": "page-002-ordering-tonkotsu.png",
+  "width": 936,
+  "height": 1681,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "いらっしゃい！",
+        "reading": "いらっしゃい！",
+        "english": "Welcome!",
+        "note": "A standard greeting when entering a shop or restaurant.",
+        "romaji": "Irasshai!"
+      },
+      {
+        "japanese": "ひとり？ / はい、ひとりです。",
+        "reading": "ひとり？ / はい、ひとりです。",
+        "english": "One person? / Yes, one person.",
+        "note": "ひとり means one person. The polite answer adds です.",
+        "romaji": "Hitori? / Hai, hitori desu."
+      },
+      {
+        "japanese": "どこから来たの？ / アメリカから来ました。",
+        "reading": "どこから きたの？ / アメリカから きました。",
+        "english": "Where are you from? / I came from America.",
+        "note": "から marks the origin or starting point.",
+        "romaji": "Doko kara kita no? / Amerika kara kimashita."
+      },
+      {
+        "japanese": "ラーメンは何が好き？",
+        "reading": "ラーメンは なにが すき？",
+        "english": "What kind of ramen do you like?",
+        "note": "何が好き asks what someone likes from a set of choices.",
+        "romaji": "Ramen wa nani ga suki?"
+      },
+      {
+        "japanese": "とんこつラーメンをお願いします！",
+        "reading": "とんこつラーメンを おねがいします！",
+        "english": "Tonkotsu ramen, please!",
+        "note": "をお願いします is a polite ordering pattern.",
+        "romaji": "Tonkotsu ramen o onegai shimasu!"
+      },
+      {
+        "japanese": "麺のかたさは？ / バリカタでお願いします！",
+        "reading": "めんの かたさは？ / バリカタで おねがいします！",
+        "english": "How firm would you like the noodles? / Very firm, please!",
+        "note": "で can mark the chosen option when ordering.",
+        "romaji": "Men no katasa wa? / Barikata de onegai shimasu!"
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "しょうゆ",
+        "reading": "しょうゆ",
+        "meaning": "soy sauce",
+        "note": "Often written 醤油.",
+        "romaji": "shoyu"
+      },
+      {
+        "term": "味噌",
+        "reading": "みそ",
+        "meaning": "miso",
+        "note": "A fermented soybean paste and common ramen flavor.",
+        "romaji": "miso"
+      },
+      {
+        "term": "塩",
+        "reading": "しお",
+        "meaning": "salt",
+        "note": "A lighter ramen flavor.",
+        "romaji": "shio"
+      },
+      {
+        "term": "豚骨",
+        "reading": "とんこつ",
+        "meaning": "pork bone",
+        "note": "A rich ramen broth style.",
+        "romaji": "tonkotsu"
+      },
+      {
+        "term": "麺",
+        "reading": "めん",
+        "meaning": "noodles",
+        "note": "Used in ramen, udon, soba, and other noodle dishes.",
+        "romaji": "men"
+      },
+      {
+        "term": "バリカタ",
+        "reading": "バリカタ",
+        "meaning": "very firm",
+        "note": "A ramen firmness choice, especially common with tonkotsu ramen.",
+        "romaji": "barikata"
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Welcome",
+        "x": 0.55,
+        "y": 0.12,
+        "scale": 2.15
+      },
+      {
+        "label": "One person",
+        "x": 0.27,
+        "y": 0.31,
+        "scale": 2.45
+      },
+      {
+        "label": "Where are you from",
+        "x": 0.72,
+        "y": 0.31,
+        "scale": 2.45
+      },
+      {
+        "label": "Ramen flavors",
+        "x": 0.57,
+        "y": 0.51,
+        "scale": 2.15
+      },
+      {
+        "label": "Tonkotsu order",
+        "x": 0.5,
+        "y": 0.73,
+        "scale": 2.25
+      },
+      {
+        "label": "Noodle firmness",
+        "x": 0.53,
+        "y": 0.91,
+        "scale": 2.2
+      }
+    ]
+  },
+  "metadata": {}
+}

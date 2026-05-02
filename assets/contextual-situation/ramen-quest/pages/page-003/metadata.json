@@ -1,0 +1,146 @@
+{
+  "laneId": "contextual-situation",
+  "laneName": "Contextual Situation",
+  "bookId": "ramen-quest",
+  "pageId": "page-003",
+  "pageNumber": 3,
+  "pageTitle": "Choosing Toppings",
+  "displayTitle": "ページ3 トッピングを選ぶ",
+  "chapterNumber": "01",
+  "chapterName": "The First Bowl",
+  "chapter": "Chapter 01: The First Bowl",
+  "image": "page-003-choosing-toppings.png",
+  "width": 935,
+  "height": 1682,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "トッピングを選ぶ",
+        "reading": "トッピングを えらぶ",
+        "english": "Choose toppings",
+        "note": "選ぶ means to choose or select.",
+        "romaji": "Toppingu o erabu"
+      },
+      {
+        "japanese": "トッピングは何がありますか？",
+        "reading": "トッピングは なにが ありますか？",
+        "english": "What toppings do you have?",
+        "note": "何がありますか asks what exists or is available.",
+        "romaji": "Toppingu wa nani ga arimasu ka?"
+      },
+      {
+        "japanese": "はいよ！定番はこんな感じだね。",
+        "reading": "はいよ！ていばんは こんな かんじだね。",
+        "english": "Sure! The standard ones are like this.",
+        "note": "定番 means the standard, classic, or usual option.",
+        "romaji": "Hai yo! Teiban wa konna kanji da ne."
+      },
+      {
+        "japanese": "じゃあ、味玉とチャーシューをお願いします。",
+        "reading": "じゃあ、あじたまと チャーシューを おねがいします。",
+        "english": "Then, seasoned egg and chashu pork, please.",
+        "note": "と connects nouns: A and B.",
+        "romaji": "Jaa, ajitama to chashu o onegai shimasu."
+      },
+      {
+        "japanese": "お待たせ！ラーメン、味玉、チャーシュー！",
+        "reading": "おまたせ！ラーメン、あじたま、チャーシュー！",
+        "english": "Thanks for waiting! Ramen with seasoned egg and chashu!",
+        "note": "お待たせ is short for お待たせしました, said when bringing something after a wait.",
+        "romaji": "Omatase! Ramen, ajitama, chashu!"
+      },
+      {
+        "japanese": "いただきます！",
+        "reading": "いただきます！",
+        "english": "Let's eat!",
+        "note": "Said before eating to express gratitude for the meal.",
+        "romaji": "Itadakimasu!"
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "味玉",
+        "reading": "あじたま",
+        "meaning": "seasoned egg",
+        "note": "A ramen topping, usually marinated soft-boiled egg.",
+        "romaji": "ajitama"
+      },
+      {
+        "term": "のり",
+        "reading": "のり",
+        "meaning": "nori seaweed",
+        "note": "A common sheet seaweed topping.",
+        "romaji": "nori"
+      },
+      {
+        "term": "メンマ",
+        "reading": "メンマ",
+        "meaning": "bamboo shoots",
+        "note": "Seasoned bamboo shoots used in ramen.",
+        "romaji": "menma"
+      },
+      {
+        "term": "チャーシュー",
+        "reading": "チャーシュー",
+        "meaning": "chashu pork",
+        "note": "Braised or roasted pork slices.",
+        "romaji": "chashu"
+      },
+      {
+        "term": "ねぎ",
+        "reading": "ねぎ",
+        "meaning": "green onion",
+        "note": "A fresh aromatic topping.",
+        "romaji": "negi"
+      },
+      {
+        "term": "美味しそう",
+        "reading": "おいしそう",
+        "meaning": "looks delicious",
+        "note": "Adjective stem + そう means it looks or seems that way.",
+        "romaji": "oishiso"
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Title and menu",
+        "x": 0.52,
+        "y": 0.12,
+        "scale": 2
+      },
+      {
+        "label": "Topping choices",
+        "x": 0.6,
+        "y": 0.31,
+        "scale": 2.2
+      },
+      {
+        "label": "Ordering toppings",
+        "x": 0.5,
+        "y": 0.49,
+        "scale": 2.35
+      },
+      {
+        "label": "Ramen arrives",
+        "x": 0.62,
+        "y": 0.66,
+        "scale": 2.3
+      },
+      {
+        "label": "Looks delicious",
+        "x": 0.27,
+        "y": 0.88,
+        "scale": 2.35
+      },
+      {
+        "label": "Let's eat",
+        "x": 0.74,
+        "y": 0.88,
+        "scale": 2.35
+      }
+    ]
+  },
+  "metadata": {}
+}

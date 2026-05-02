@@ -31,6 +31,15 @@ body {
   color: var(--text);
 }
 
+body[data-view="reader"] {
+  overflow: hidden;
+}
+
+button {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -54,6 +63,10 @@ img {
   list-style: none;
 }
 
+.book-item {
+  min-width: 0;
+}
+
 .book-card {
   --book-accent: var(--gold);
   display: grid;
@@ -61,7 +74,10 @@ img {
   width: 100%;
   min-width: 0;
   padding: 10px;
+  border: 0;
+  background: transparent;
   color: inherit;
+  cursor: pointer;
   text-align: center;
 }
 
@@ -138,6 +154,293 @@ img {
   transform: scale(1.035);
 }
 
+.book-card:focus-visible,
+.reader-icon-button:focus-visible,
+.reader-nav:focus-visible,
+.reader-action:focus-visible,
+.lesson-chip:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--book-accent, var(--gold)) 78%, white 12%);
+  outline-offset: 4px;
+}
+
+.library.is-reader {
+  display: block;
+  min-height: 100svh;
+  padding: 0;
+}
+
+.reader,
+.reader-loading,
+.reader-error {
+  position: fixed;
+  inset: 0;
+  background: #050505;
+  color: var(--text);
+}
+
+.reader-loading,
+.reader-error {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  font-size: 1rem;
+}
+
+.reader-error {
+  gap: 18px;
+  align-content: center;
+}
+
+.reader-error p {
+  max-width: 560px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+  text-align: center;
+}
+
+.reader-stage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+}
+
+.page-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  transform-origin: 0 0;
+  transition: transform 260ms ease;
+  will-change: transform;
+}
+
+.reader-page-image {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+
+.reader-topbar,
+.reader-controls,
+.reader-nav {
+  position: fixed;
+  z-index: 3;
+}
+
+.reader-topbar {
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reader-page-status,
+.zoom-point-label {
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(5, 5, 5, 0.56);
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 760;
+  line-height: 1.2;
+  backdrop-filter: blur(12px);
+}
+
+.reader-icon-button,
+.reader-nav,
+.reader-action {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(5, 5, 5, 0.58);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 820;
+  line-height: 1;
+  backdrop-filter: blur(12px);
+}
+
+.reader-icon-button,
+.reader-action {
+  width: 42px;
+  height: 42px;
+}
+
+.reader-nav {
+  top: 50%;
+  width: 46px;
+  height: 66px;
+  transform: translateY(-50%);
+}
+
+.reader-nav-left {
+  left: 14px;
+}
+
+.reader-nav-right {
+  right: 14px;
+}
+
+.reader-nav:disabled {
+  display: none;
+}
+
+.reader-controls {
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.zoom-point-label:empty {
+  display: none;
+}
+
+.lesson-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  align-items: end;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.44);
+}
+
+.lesson-panel {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  max-height: min(74svh, 720px);
+  padding: 58px 14px 14px;
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(10, 10, 9, 0.74);
+  backdrop-filter: blur(16px);
+}
+
+.lesson-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.lesson-grid-vocab {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.lesson-chip {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.13);
+  color: var(--text);
+  cursor: pointer;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.lesson-title {
+  font-size: 1.02rem;
+  font-weight: 820;
+  line-height: 1.35;
+}
+
+.lesson-reading {
+  color: #f2d191;
+  font-size: 0.86rem;
+  font-weight: 720;
+  line-height: 1.35;
+}
+
+.lesson-romaji {
+  color: #9ed8e6;
+  font-size: 0.84rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lesson-english,
+.lesson-note {
+  color: rgba(247, 241, 232, 0.84);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.lesson-note {
+  color: var(--muted);
+}
+
+.controls-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 6;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.controls-intro-panel {
+  display: grid;
+  gap: 14px;
+  width: min(420px, 100%);
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(10, 10, 9, 0.78);
+  backdrop-filter: blur(16px);
+}
+
+.controls-intro h2 {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.2;
+}
+
+.controls-intro ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.4;
+}
+
+.controls-start {
+  justify-self: end;
+  width: auto;
+  min-width: 92px;
+  height: 40px;
+  padding: 0 16px;
+}
+
 @media (max-width: 760px) {
   .library {
     align-items: start;
@@ -155,6 +458,60 @@ img {
   }
 
   .book-label {
+    font-size: 0.98rem;
+  }
+
+  .reader-topbar {
+    top: 10px;
+    left: 10px;
+  }
+
+  .reader-controls {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .reader-nav {
+    width: 38px;
+    height: 58px;
+  }
+
+  .reader-nav-left {
+    left: 8px;
+  }
+
+  .reader-nav-right {
+    right: 8px;
+  }
+
+  .reader-icon-button,
+  .reader-action {
+    width: 40px;
+    height: 40px;
+  }
+
+  .reader-page-status,
+  .zoom-point-label {
+    min-height: 32px;
+    padding: 7px 10px;
+    font-size: 0.84rem;
+  }
+
+  .lesson-overlay {
+    padding: 8px;
+  }
+
+  .lesson-panel {
+    max-height: 78svh;
+    padding: 54px 10px 10px;
+  }
+
+  .lesson-grid,
+  .lesson-grid-vocab {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-title {
     font-size: 0.98rem;
   }
 }
