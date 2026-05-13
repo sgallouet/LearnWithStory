@@ -35,9 +35,13 @@ const books = [
 ];
 
 const MAX_ZOOM_SCALE = 3;
+const OFFLINE_CACHE_NAME = "learn-with-story-offline-v1";
+const OFFLINE_CACHE_KEY = "learn-with-story:cache-stories";
+const OFFLINE_CACHE_SIGNATURE_KEY = "learn-with-story:cache-signature";
 const libraryRoot = document.querySelector("[data-library]");
 const pageMetadataCache = new Map();
 const imagePreloadCache = new Set();
+let offlineCachePromise = null;
 const state = {
   view: "library",
   activeBook: null,
@@ -56,6 +60,10 @@ function clamp(value, min, max) {
 
 function pageMetadataUrl(metadataPath) {
   return new URL(metadataPath, window.location.href);
+}
+
+function absoluteUrl(path) {
+  return new URL(path, window.location.href).toString();
 }
 
 function loadPageMetadata(metadataPath) {
@@ -112,6 +120,186 @@ function preloadFirstStoryPages() {
   } else {
     window.setTimeout(warmFirstPages, 120);
   }
+}
+
+function offlineCacheSupported() {
+  return "caches" in window && "serviceWorker" in navigator && window.isSecureContext;
+}
+
+function getOfflineCacheEnabled() {
+  try {
+    return window.localStorage.getItem(OFFLINE_CACHE_KEY) !== "false";
+  } catch {
+    return true;
+  }
+}
+
+function setOfflineCacheEnabled(enabled) {
+  try {
+    window.localStorage.setItem(OFFLINE_CACHE_KEY, enabled ? "true" : "false");
+  } catch {
+    // The toggle still works for this session if localStorage is unavailable.
+  }
+}
+
+function offlineCacheSignature() {
+  return JSON.stringify(
+    books.map((book) => ({
+      id: book.id,
+      coverBase: book.coverBase,
+      pages: book.pages,
+    })),
+  );
+}
+
+function hasCurrentOfflineCacheSignature() {
+  try {
+    return window.localStorage.getItem(OFFLINE_CACHE_SIGNATURE_KEY) === offlineCacheSignature();
+  } catch {
+    return false;
+  }
+}
+
+function markCurrentOfflineCacheSignature() {
+  try {
+    window.localStorage.setItem(OFFLINE_CACHE_SIGNATURE_KEY, offlineCacheSignature());
+  } catch {
+    // Cache completion does not depend on localStorage.
+  }
+}
+
+function coverAssetUrls(book) {
+  const widths = ["480", "720", "960", "1086"];
+  const urls = [absoluteUrl(`${book.coverBase}/cover-original.png`)];
+
+  for (const width of widths) {
+    urls.push(absoluteUrl(`${book.coverBase}/cover-${width}.webp`));
+    urls.push(absoluteUrl(`${book.coverBase}/cover-${width}.jpg`));
+  }
+
+  return urls;
+}
+
+async function storyAssetUrls() {
+  const urls = new Set([
+    absoluteUrl("./"),
+    absoluteUrl("index.html"),
+    absoluteUrl("app.js"),
+    absoluteUrl("styles.css"),
+    absoluteUrl("sw.js"),
+  ]);
+  let complete = true;
+
+  for (const book of books) {
+    for (const url of coverAssetUrls(book)) {
+      urls.add(url);
+    }
+
+    for (const metadataPath of book.pages) {
+      urls.add(pageMetadataUrl(metadataPath).toString());
+
+      try {
+        const page = await loadPageMetadata(metadataPath);
+        urls.add(page.imageUrl);
+      } catch {
+        complete = false;
+        // Leave failed metadata unmarked so the next online load can retry.
+      }
+    }
+  }
+
+  return {
+    complete,
+    urls: [...urls],
+  };
+}
+
+async function cacheUrl(cache, url) {
+  const request = new Request(url, { cache: "reload" });
+  const response = await fetch(request);
+
+  if (!response.ok) {
+    throw new Error(`Could not cache ${url}`);
+  }
+
+  await cache.put(request, response.clone());
+}
+
+async function cacheStoriesForOffline({ force = false } = {}) {
+  if (!offlineCacheSupported() || !getOfflineCacheEnabled()) {
+    return;
+  }
+
+  if (!force && hasCurrentOfflineCacheSignature()) {
+    return;
+  }
+
+  if (offlineCachePromise) {
+    return offlineCachePromise;
+  }
+
+  offlineCachePromise = (async () => {
+    const { complete, urls } = await storyAssetUrls();
+    const cache = await window.caches.open(OFFLINE_CACHE_NAME);
+    const results = await Promise.allSettled(urls.map((url) => cacheUrl(cache, url)));
+    const failed = !complete || results.some((result) => result.status === "rejected");
+
+    if (!failed) {
+      markCurrentOfflineCacheSignature();
+    }
+  })().finally(() => {
+    offlineCachePromise = null;
+  });
+
+  return offlineCachePromise;
+}
+
+function scheduleOfflineStoryCache({ force = false } = {}) {
+  if (!getOfflineCacheEnabled()) {
+    return;
+  }
+
+  const startCaching = () => {
+    cacheStoriesForOffline({ force }).catch((error) => {
+      console.warn("Story offline cache failed", error);
+    });
+  };
+
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(startCaching, { timeout: 1600 });
+  } else {
+    window.setTimeout(startCaching, 180);
+  }
+}
+
+function createOfflineToggle() {
+  const shell = document.createElement("label");
+  shell.className = "offline-toggle";
+
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.checked = getOfflineCacheEnabled();
+  input.disabled = !offlineCacheSupported();
+  input.setAttribute("aria-label", "Cache stories for offline reading");
+
+  const text = document.createElement("span");
+  text.className = "offline-toggle-text";
+  text.textContent = "Offline";
+
+  const track = document.createElement("span");
+  track.className = "offline-toggle-track";
+  track.setAttribute("aria-hidden", "true");
+
+  input.addEventListener("change", () => {
+    setOfflineCacheEnabled(input.checked);
+
+    if (input.checked) {
+      scheduleOfflineStoryCache({ force: true });
+    }
+  });
+
+  shell.append(input, text, track);
+  return shell;
 }
 
 function preloadReaderNeighbors() {
@@ -222,9 +410,10 @@ function renderLibrary() {
   list.setAttribute("aria-label", "Book covers");
 
   books.forEach((book, index) => list.append(createBookCard(book, index === 0)));
-  fragment.append(list);
+  fragment.append(createOfflineToggle(), list);
   libraryRoot.replaceChildren(fragment);
   preloadFirstStoryPages();
+  scheduleOfflineStoryCache();
 }
 
 function renderLoading(book) {
@@ -677,5 +866,13 @@ document.addEventListener("fullscreenchange", () => {
     renderReader();
   }
 });
+
+if ("serviceWorker" in navigator && window.isSecureContext) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch((error) => {
+      console.warn("Service worker registration failed", error);
+    });
+  });
+}
 
 renderLibrary();
