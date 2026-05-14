@@ -1,0 +1,125 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-014",
+  "pageNumber": 14,
+  "pageTitle": "What Takes Priority",
+  "displayTitle": "ページ14 優先するもの",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-014-priorities.png",
+  "width": 977,
+  "height": 1610,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "何者だ、逃がすな。",
+        "reading": "何者だ、逃がすな。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Who is there? Do not let him escape.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "この老人はすべてを知っている。",
+        "reading": "この老人はすべてを知っている。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "This old man knows everything.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "それらの巻物が本物とは限らない。案内人を連れて行きましょう。",
+        "reading": "それらの巻物が本物とは限らない。案内人を連れて行きましょう。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Those scrolls may be decoys. Take the guide.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "了解。この者をいただく。",
+        "reading": "了解。この者をいただく。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Understood. I will take him.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "優先",
+        "reading": "ゆうせん",
+        "romaji": "yusen",
+        "meaning": "priority",
+        "note": "What comes first."
+      },
+      {
+        "term": "案内人",
+        "reading": "あんないにん",
+        "romaji": "annainin",
+        "meaning": "guide",
+        "note": "A person who leads others."
+      },
+      {
+        "term": "巻物",
+        "reading": "まきもの",
+        "romaji": "makimono",
+        "meaning": "scroll",
+        "note": "Rolled document."
+      },
+      {
+        "term": "連れて行く",
+        "reading": "つれていく",
+        "romaji": "tsurete iku",
+        "meaning": "to take along",
+        "note": "Movement with a companion."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and opening beat",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Upper story text",
+        "rect": {
+          "x": 0.02,
+          "y": 0.24,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Middle panels",
+        "rect": {
+          "x": 0.02,
+          "y": 0.48,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Final panel",
+        "rect": {
+          "x": 0.02,
+          "y": 0.73,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

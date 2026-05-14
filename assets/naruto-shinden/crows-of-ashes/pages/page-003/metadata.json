@@ -1,0 +1,125 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-003",
+  "pageNumber": 3,
+  "pageTitle": "Entering the Village",
+  "displayTitle": "ページ3 村に入る",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-003-entering-village.png",
+  "width": 941,
+  "height": 1672,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "来た。",
+        "reading": "来た。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "They are here.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "遺跡へ、まっすぐ行くぞ。",
+        "reading": "遺跡へ、まっすぐ行くぞ。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "We go straight to the ruins.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "先に、村人が何を知っているか確かめる。",
+        "reading": "先に、村人が何を知っているか確かめる。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "First, we confirm what the villagers know.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "どちらでもない。",
+        "reading": "どちらでもない。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Neither.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "村",
+        "reading": "むら",
+        "romaji": "mura",
+        "meaning": "village",
+        "note": "Core location word."
+      },
+      {
+        "term": "遺跡",
+        "reading": "いせき",
+        "romaji": "iseki",
+        "meaning": "ruins",
+        "note": "A historic site."
+      },
+      {
+        "term": "確かめる",
+        "reading": "たしかめる",
+        "romaji": "tashikameru",
+        "meaning": "to confirm",
+        "note": "Verb for checking facts."
+      },
+      {
+        "term": "礼儀正しい",
+        "reading": "れいぎただしい",
+        "romaji": "reigi tadashii",
+        "meaning": "polite",
+        "note": "Adjective phrase."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and opening panel",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.96,
+          "h": 0.26
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Upper dialogue",
+        "rect": {
+          "x": 0.02,
+          "y": 0.27,
+          "w": 0.96,
+          "h": 0.22
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Middle exchange",
+        "rect": {
+          "x": 0.02,
+          "y": 0.49,
+          "w": 0.96,
+          "h": 0.22
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Lower reveal",
+        "rect": {
+          "x": 0.02,
+          "y": 0.7,
+          "w": 0.96,
+          "h": 0.28
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

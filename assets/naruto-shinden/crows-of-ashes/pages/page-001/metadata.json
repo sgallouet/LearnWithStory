@@ -1,0 +1,135 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-001",
+  "pageNumber": 1,
+  "pageTitle": "Smoke Forest",
+  "displayTitle": "ページ1 煙の森",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-001-smoke-forest.png",
+  "width": 1024,
+  "height": 1536,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "火の国との国境近く、烏の森。",
+        "reading": "火の国との国境近く、烏の森。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Near the border of the Land of Fire: Karasu no Mori.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "カラスが低く飛んでる。",
+        "reading": "カラスが低く飛んでる。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "The crows are flying low.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "知らない人が来る合図。",
+        "reading": "知らない人が来る合図。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "A sign that strangers are coming.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "祈りに来る人じゃない。",
+        "reading": "祈りに来る人じゃない。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "They are not here to pray.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "煙",
+        "reading": "けむり",
+        "romaji": "kemuri",
+        "meaning": "smoke",
+        "note": "Useful scene-setting noun."
+      },
+      {
+        "term": "森",
+        "reading": "もり",
+        "romaji": "mori",
+        "meaning": "forest",
+        "note": "Place noun; often appears in titles."
+      },
+      {
+        "term": "国境",
+        "reading": "こっきょう",
+        "romaji": "kokkyo",
+        "meaning": "border",
+        "note": "Formal word for a national boundary."
+      },
+      {
+        "term": "合図",
+        "reading": "あいず",
+        "romaji": "aizu",
+        "meaning": "sign or signal",
+        "note": "A cue that something is about to happen."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and border text",
+        "rect": {
+          "x": 0.02,
+          "y": 0.02,
+          "w": 0.22,
+          "h": 0.29
+        },
+        "scale": 2.6
+      },
+      {
+        "label": "Forest gate and shrine signs",
+        "rect": {
+          "x": 0.24,
+          "y": 0.02,
+          "w": 0.74,
+          "h": 0.3
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Sweeping girl warning",
+        "rect": {
+          "x": 0.02,
+          "y": 0.33,
+          "w": 0.55,
+          "h": 0.3
+        },
+        "scale": 2.2
+      },
+      {
+        "label": "Crow omen",
+        "rect": {
+          "x": 0.58,
+          "y": 0.34,
+          "w": 0.4,
+          "h": 0.29
+        },
+        "scale": 2.2
+      },
+      {
+        "label": "Arrival and final thought",
+        "rect": {
+          "x": 0.02,
+          "y": 0.64,
+          "w": 0.96,
+          "h": 0.34
+        },
+        "scale": 2
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

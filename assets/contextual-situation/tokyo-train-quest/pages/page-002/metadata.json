@@ -1,0 +1,156 @@
+{
+  "laneId": "contextual-situation",
+  "laneName": "Contextual Situation",
+  "bookId": "tokyo-train-quest",
+  "pageId": "page-002",
+  "pageNumber": 2,
+  "pageTitle": "Passing the Ticket Gate",
+  "displayTitle": "ページ2 改札を通る",
+  "chapterNumber": "02",
+  "chapterName": "The First Commute",
+  "chapter": "Chapter 02: The First Commute",
+  "image": "page-002-ticket-gate.png",
+  "width": 941,
+  "height": 1672,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "えっと、ICカードはここで使うんだよね。",
+        "reading": "えっと、アイシーカードは ここで つかうんだよね。",
+        "romaji": "Etto, ai-shi-kado wa koko de tsukau n da yo ne.",
+        "english": "Um, I use my IC card here, right?",
+        "note": "んだよね sounds like checking or confirming."
+      },
+      {
+        "japanese": "ICカードをタッチします。",
+        "reading": "アイシーカードを タッチします。",
+        "romaji": "Ai-shi-kado o tacchi shimasu.",
+        "english": "Tap your IC card.",
+        "note": "を marks the thing being tapped."
+      },
+      {
+        "japanese": "よかった、通れた。",
+        "reading": "よかった、とおれた。",
+        "romaji": "Yokatta, toreta.",
+        "english": "Good, I got through.",
+        "note": "通れた is potential past: “was able to pass.”"
+      },
+      {
+        "japanese": "改札では立ち止まらず、カードやスマホを先に準備します。",
+        "reading": "かいさつでは たちどまらず、カードや スマホを さきに じゅんびします。",
+        "romaji": "Kaisatsu de wa tachidomarazu, kado ya sumaho o saki ni junbi shimasu.",
+        "english": "At the gate, prepare your card or phone before you get there.",
+        "note": "ず after a verb means “without doing.”"
+      },
+      {
+        "japanese": "次はホームを探そう。",
+        "reading": "つぎは ホームを さがそう。",
+        "romaji": "Tsugi wa homu o sagaso.",
+        "english": "Next, I need to find the platform.",
+        "note": "探そう is volitional: “let us look for.”"
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "ICカード",
+        "reading": "アイシーカード",
+        "romaji": "ai-shi-kado",
+        "meaning": "IC card",
+        "note": "Transit smart card."
+      },
+      {
+        "term": "タッチする",
+        "reading": "タッチする",
+        "romaji": "tacchi suru",
+        "meaning": "to tap",
+        "note": "Loanword verb."
+      },
+      {
+        "term": "残高",
+        "reading": "ざんだか",
+        "romaji": "zandaka",
+        "meaning": "remaining balance",
+        "note": "Money left on a card."
+      },
+      {
+        "term": "チャージ機",
+        "reading": "チャージき",
+        "romaji": "chaji-ki",
+        "meaning": "recharge machine",
+        "note": "Machine for adding fare value."
+      },
+      {
+        "term": "準備",
+        "reading": "じゅんび",
+        "romaji": "junbi",
+        "meaning": "preparation",
+        "note": "Key etiquette word."
+      },
+      {
+        "term": "ホーム",
+        "reading": "ホーム",
+        "romaji": "homu",
+        "meaning": "platform",
+        "note": "Transit platform."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Ticket gate signs",
+        "rect": {
+          "x": 0.02,
+          "y": 0.02,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.2
+      },
+      {
+        "label": "Tap IC card instruction",
+        "rect": {
+          "x": 0.02,
+          "y": 0.26,
+          "w": 0.96,
+          "h": 0.21
+        },
+        "scale": 2.2
+      },
+      {
+        "label": "Successful gate pass",
+        "rect": {
+          "x": 0.02,
+          "y": 0.48,
+          "w": 0.96,
+          "h": 0.18
+        },
+        "scale": 2.4
+      },
+      {
+        "label": "Gate etiquette diagram",
+        "rect": {
+          "x": 0.02,
+          "y": 0.66,
+          "w": 0.96,
+          "h": 0.17
+        },
+        "scale": 2.4
+      },
+      {
+        "label": "Find the platform",
+        "rect": {
+          "x": 0.02,
+          "y": 0.84,
+          "w": 0.96,
+          "h": 0.14
+        },
+        "scale": 2.3
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Tokyo train commuting comic page image",
+    "importDate": "2026-05-14"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-009",
+  "pageNumber": 9,
+  "pageTitle": "Descent Chamber",
+  "displayTitle": "ページ9 降下の間",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-009-descent-chamber.png",
+  "width": 1055,
+  "height": 1491,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "やっと面白くなってきたな。",
+        "reading": "やっと面白くなってきたな。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Now this is getting interesting.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "中央の枠に触るな。",
+        "reading": "中央の枠に触るな。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Do not touch the central frame.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "つまり、そこが要だな。",
+        "reading": "つまり、そこが要だな。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "So that is the key point.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "灰の奔流は、何で起こる？",
+        "reading": "灰の奔流は、何で起こる？",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "What triggers the ash flood?",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "降下",
+        "reading": "こうか",
+        "romaji": "koka",
+        "meaning": "descent",
+        "note": "Movement downward."
+      },
+      {
+        "term": "中央",
+        "reading": "ちゅうおう",
+        "romaji": "chuo",
+        "meaning": "center",
+        "note": "Spatial noun."
+      },
+      {
+        "term": "枠",
+        "reading": "わく",
+        "romaji": "waku",
+        "meaning": "frame",
+        "note": "Physical frame or boundary."
+      },
+      {
+        "term": "奔流",
+        "reading": "ほんりゅう",
+        "romaji": "honryu",
+        "meaning": "torrent",
+        "note": "A rushing flow."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and opening panel",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.96,
+          "h": 0.26
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Upper dialogue",
+        "rect": {
+          "x": 0.02,
+          "y": 0.27,
+          "w": 0.96,
+          "h": 0.22
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Middle exchange",
+        "rect": {
+          "x": 0.02,
+          "y": 0.49,
+          "w": 0.96,
+          "h": 0.22
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Lower reveal",
+        "rect": {
+          "x": 0.02,
+          "y": 0.7,
+          "w": 0.96,
+          "h": 0.28
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

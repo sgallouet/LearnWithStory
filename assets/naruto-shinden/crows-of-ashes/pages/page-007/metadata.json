@@ -1,0 +1,125 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-007",
+  "pageNumber": 7,
+  "pageTitle": "Basket Brothers",
+  "displayTitle": "ページ7 箕兄弟",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-007-basket-brothers.png",
+  "width": 1055,
+  "height": 1491,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "あんな化け物を神殿へ行かせるわけにはいかない。",
+        "reading": "あんな化け物を神殿へ行かせるわけにはいかない。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "We cannot let those monsters reach the shrine.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "正面から戦えば、僕らは死ぬ。",
+        "reading": "正面から戦えば、僕らは死ぬ。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "If we fight them head-on, we die.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "じゃあ、見ているだけか？",
+        "reading": "じゃあ、見ているだけか？",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Then what, just watch?",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "足を止める。そして村人を先に守る。",
+        "reading": "足を止める。そして村人を先に守る。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "No. We slow them, and we protect the villagers first.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "箕",
+        "reading": "み",
+        "romaji": "mi",
+        "meaning": "basket",
+        "note": "Old tool word used in the brothers title."
+      },
+      {
+        "term": "化け物",
+        "reading": "ばけもの",
+        "romaji": "bakemono",
+        "meaning": "monster",
+        "note": "Creature or monstrous person."
+      },
+      {
+        "term": "正面",
+        "reading": "しょうめん",
+        "romaji": "shomen",
+        "meaning": "front or head-on",
+        "note": "Used for direct confrontation."
+      },
+      {
+        "term": "守る",
+        "reading": "まもる",
+        "romaji": "mamoru",
+        "meaning": "to protect",
+        "note": "Core action verb."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and opening panel",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.96,
+          "h": 0.26
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Upper dialogue",
+        "rect": {
+          "x": 0.02,
+          "y": 0.27,
+          "w": 0.96,
+          "h": 0.22
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Middle exchange",
+        "rect": {
+          "x": 0.02,
+          "y": 0.49,
+          "w": 0.96,
+          "h": 0.22
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Lower reveal",
+        "rect": {
+          "x": 0.02,
+          "y": 0.7,
+          "w": 0.96,
+          "h": 0.28
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

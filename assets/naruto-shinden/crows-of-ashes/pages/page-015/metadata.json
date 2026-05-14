@@ -1,0 +1,125 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-015",
+  "pageNumber": 15,
+  "pageTitle": "Core",
+  "displayTitle": "ページ15 核心",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-015-core.png",
+  "width": 977,
+  "height": 1610,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "ここが最奥の部屋か。",
+        "reading": "ここが最奥の部屋か。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "So this is the innermost chamber.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "ここは戦の記録庫か。",
+        "reading": "ここは戦の記録庫か。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "This is a war archive.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "戦の最中は、この隠された道が命をつなぐ。",
+        "reading": "戦の最中は、この隠された道が命をつなぐ。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "During war, these hidden roads are what keep lives connected.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "忘れることがもっと多くの命を救う。",
+        "reading": "忘れることがもっと多くの命を救う。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "After the war ends, forgetting them can save even more lives.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "核心",
+        "reading": "かくしん",
+        "romaji": "kakushin",
+        "meaning": "core",
+        "note": "Central truth or heart."
+      },
+      {
+        "term": "最奥",
+        "reading": "さいおう",
+        "romaji": "saio",
+        "meaning": "innermost place",
+        "note": "Deepest part."
+      },
+      {
+        "term": "記録庫",
+        "reading": "きろくこ",
+        "romaji": "kirokuko",
+        "meaning": "archive room",
+        "note": "Storehouse for records."
+      },
+      {
+        "term": "命をつなぐ",
+        "reading": "いのちをつなぐ",
+        "romaji": "inochi o tsunagu",
+        "meaning": "to keep lives connected",
+        "note": "Metaphoric survival phrase."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and opening beat",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Upper story text",
+        "rect": {
+          "x": 0.02,
+          "y": 0.24,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Middle panels",
+        "rect": {
+          "x": 0.02,
+          "y": 0.48,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Final panel",
+        "rect": {
+          "x": 0.02,
+          "y": 0.73,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

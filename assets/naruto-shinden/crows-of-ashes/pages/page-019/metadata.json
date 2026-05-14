@@ -1,0 +1,125 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-019",
+  "pageNumber": 19,
+  "pageTitle": "Final Words",
+  "displayTitle": "ページ19 最後の言葉",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-019-final-words.png",
+  "width": 977,
+  "height": 1610,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "よかった。もう何も残っていねえ。",
+        "reading": "よかった。もう何も残っていねえ。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Good. Nothing remains.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "それで、みんなを守れたの？",
+        "reading": "それで、みんなを守れたの？",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Was that enough to protect them?",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "刃の前に立って守る者もいる。",
+        "reading": "刃の前に立って守る者もいる。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Some protect by standing before the blade.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "喉元に届かぬようにする者もいる。",
+        "reading": "喉元に届かぬようにする者もいる。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Others make sure it never finds the right throat.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "最後",
+        "reading": "さいご",
+        "romaji": "saigo",
+        "meaning": "last",
+        "note": "Final thing or moment."
+      },
+      {
+        "term": "言葉",
+        "reading": "ことば",
+        "romaji": "kotoba",
+        "meaning": "words",
+        "note": "Speech or language."
+      },
+      {
+        "term": "刃",
+        "reading": "やいば",
+        "romaji": "yaiba",
+        "meaning": "blade",
+        "note": "Poetic word for blade."
+      },
+      {
+        "term": "喉元",
+        "reading": "のどもと",
+        "romaji": "nodomoto",
+        "meaning": "throat",
+        "note": "Vulnerable point."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and opening beat",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Upper story text",
+        "rect": {
+          "x": 0.02,
+          "y": 0.24,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Middle panels",
+        "rect": {
+          "x": 0.02,
+          "y": 0.48,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Final panel",
+        "rect": {
+          "x": 0.02,
+          "y": 0.73,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

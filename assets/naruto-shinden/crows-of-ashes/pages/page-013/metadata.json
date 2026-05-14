@@ -1,0 +1,125 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-013",
+  "pageNumber": 13,
+  "pageTitle": "Memories of Ash",
+  "displayTitle": "ページ13 灰の記憶",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-013-memories-of-ash.png",
+  "width": 977,
+  "height": 1610,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "黒い灰が、記憶の殿堂を飲み込んだ。",
+        "reading": "黒い灰が、記憶の殿堂を飲み込んだ。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Black ash swallowed the Hall of Memories.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "失われた戦いの行列が煙の中に蘇る。",
+        "reading": "失われた戦いの行列が煙の中に蘇る。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Lost battles march again within the smoke.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "排浄システムだ。アーカイブはメモリーバーンに移行している。",
+        "reading": "排浄システムだ。アーカイブはメモリーバーンに移行している。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "This is a purge system. The archive is entering Memory Burn.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "石のカラスの彫刻が出口の方向を示してる。",
+        "reading": "石のカラスの彫刻が出口の方向を示してる。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "The stone crow carvings are pointing toward the exits.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "記憶",
+        "reading": "きおく",
+        "romaji": "kioku",
+        "meaning": "memory",
+        "note": "Abstract noun."
+      },
+      {
+        "term": "殿堂",
+        "reading": "でんどう",
+        "romaji": "dendo",
+        "meaning": "hall",
+        "note": "Grand formal building word."
+      },
+      {
+        "term": "排浄",
+        "reading": "はいじょう",
+        "romaji": "haijo",
+        "meaning": "purging",
+        "note": "Technical coined compound."
+      },
+      {
+        "term": "出口",
+        "reading": "でぐち",
+        "romaji": "deguchi",
+        "meaning": "exit",
+        "note": "Navigation noun."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and opening beat",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Upper story text",
+        "rect": {
+          "x": 0.02,
+          "y": 0.24,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Middle panels",
+        "rect": {
+          "x": 0.02,
+          "y": 0.48,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Final panel",
+        "rect": {
+          "x": 0.02,
+          "y": 0.73,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

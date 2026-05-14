@@ -1,0 +1,156 @@
+{
+  "laneId": "contextual-situation",
+  "laneName": "Contextual Situation",
+  "bookId": "tokyo-train-quest",
+  "pageId": "page-007",
+  "pageNumber": 7,
+  "pageTitle": "Transfer",
+  "displayTitle": "ページ7 乗り換え",
+  "chapterNumber": "02",
+  "chapterName": "The First Commute",
+  "chapter": "Chapter 02: The First Commute",
+  "image": "page-007-transfer.png",
+  "width": 941,
+  "height": 1672,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "出口が多すぎる。",
+        "reading": "でぐちが おおすぎる。",
+        "romaji": "Deguchi ga osugiru.",
+        "english": "There are too many exits.",
+        "note": "すぎる after an adjective means “too much.”"
+      },
+      {
+        "japanese": "乗り換えはどっち？",
+        "reading": "のりかえは どっち？",
+        "romaji": "Norikae wa dotchi?",
+        "english": "Which way is the transfer?",
+        "note": "どっち is casual “which way.”"
+      },
+      {
+        "japanese": "すみません、丸ノ内線はどこですか。",
+        "reading": "すみません、まるのうちせんは どこですか。",
+        "romaji": "Sumimasen, Marunouchi-sen wa doko desu ka.",
+        "english": "Excuse me, where is the Marunouchi Line?",
+        "note": "A direct and polite station question."
+      },
+      {
+        "japanese": "この階段を上がって、赤い案内に沿って進んでください。",
+        "reading": "この かいだんを あがって、あかい あんないに そって すすんでください。",
+        "romaji": "Kono kaidan o agatte, akai annai ni sotte susunde kudasai.",
+        "english": "Go up these stairs and follow the red signs.",
+        "note": "て-form links sequential instructions."
+      },
+      {
+        "japanese": "迷ったら「すみません、○○線はどこですか？」と聞くと便利です。",
+        "reading": "まよったら「すみません、○○せんは どこですか？」と きくと べんりです。",
+        "romaji": "Mayottara “Sumimasen, marumaru-sen wa doko desu ka?” to kiku to benri desu.",
+        "english": "If you are lost, it is useful to ask: Excuse me, where is the __ Line?",
+        "note": "たら gives a condition: “if/when.”"
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "乗り換え",
+        "reading": "のりかえ",
+        "romaji": "norikae",
+        "meaning": "transfer",
+        "note": "Changing lines or trains."
+      },
+      {
+        "term": "出口",
+        "reading": "でぐち",
+        "romaji": "deguchi",
+        "meaning": "exit",
+        "note": "Station exit."
+      },
+      {
+        "term": "西口",
+        "reading": "にしぐち",
+        "romaji": "nishiguchi",
+        "meaning": "west exit",
+        "note": "Compass-direction exit."
+      },
+      {
+        "term": "東口",
+        "reading": "ひがしぐち",
+        "romaji": "higashiguchi",
+        "meaning": "east exit",
+        "note": "Compass-direction exit."
+      },
+      {
+        "term": "階段",
+        "reading": "かいだん",
+        "romaji": "kaidan",
+        "meaning": "stairs",
+        "note": "Station direction noun."
+      },
+      {
+        "term": "案内",
+        "reading": "あんない",
+        "romaji": "annai",
+        "meaning": "guidance; sign",
+        "note": "Information or directions."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Exit and transfer signs",
+        "rect": {
+          "x": 0.02,
+          "y": 0.02,
+          "w": 0.96,
+          "h": 0.29
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Which way question",
+        "rect": {
+          "x": 0.02,
+          "y": 0.32,
+          "w": 0.96,
+          "h": 0.18
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Ask staff for the line",
+        "rect": {
+          "x": 0.02,
+          "y": 0.52,
+          "w": 0.96,
+          "h": 0.2
+        },
+        "scale": 2.2
+      },
+      {
+        "label": "Red sign confirmation",
+        "rect": {
+          "x": 0.02,
+          "y": 0.73,
+          "w": 0.49,
+          "h": 0.24
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Useful question pattern",
+        "rect": {
+          "x": 0.51,
+          "y": 0.73,
+          "w": 0.47,
+          "h": 0.24
+        },
+        "scale": 2.4
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Tokyo train commuting comic page image",
+    "importDate": "2026-05-14"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-006",
+  "pageNumber": 6,
+  "pageTitle": "First Clash",
+  "displayTitle": "ページ6 最初の衝突",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-006-first-clash.png",
+  "width": 1055,
+  "height": 1491,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "どうしよう。",
+        "reading": "どうしよう。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "What do I do?",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "漁夫の利を狙うハイエナか。",
+        "reading": "漁夫の利を狙うハイエナか。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "A hyena hoping to profit from our work.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "逃がしたぞ、イタチ。",
+        "reading": "逃がしたぞ、イタチ。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "You let him get away, Itachi.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "あの老人は道を知っている。",
+        "reading": "あの老人は道を知っている。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "That old man knows the route.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "衝突",
+        "reading": "しょうとつ",
+        "romaji": "shototsu",
+        "meaning": "clash",
+        "note": "Conflict or collision."
+      },
+      {
+        "term": "漁夫の利",
+        "reading": "ぎょふのり",
+        "romaji": "gyofu no ri",
+        "meaning": "profit from others fighting",
+        "note": "Idiom for opportunism."
+      },
+      {
+        "term": "逃がす",
+        "reading": "にがす",
+        "romaji": "nigasu",
+        "meaning": "to let escape",
+        "note": "Transitive verb."
+      },
+      {
+        "term": "道",
+        "reading": "みち",
+        "romaji": "michi",
+        "meaning": "road or route",
+        "note": "Literal and strategic meaning here."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and opening panel",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.96,
+          "h": 0.26
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Upper dialogue",
+        "rect": {
+          "x": 0.02,
+          "y": 0.27,
+          "w": 0.96,
+          "h": 0.22
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Middle exchange",
+        "rect": {
+          "x": 0.02,
+          "y": 0.49,
+          "w": 0.96,
+          "h": 0.22
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Lower reveal",
+        "rect": {
+          "x": 0.02,
+          "y": 0.7,
+          "w": 0.96,
+          "h": 0.28
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

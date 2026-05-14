@@ -1,0 +1,125 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-012",
+  "pageNumber": 12,
+  "pageTitle": "Miscalculation",
+  "displayTitle": "ページ12 誤算",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-012-miscalculation.png",
+  "width": 977,
+  "height": 1610,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "これで止める。",
+        "reading": "これで止める。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "This will stop you.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "黒い灰がありえん。",
+        "reading": "黒い灰がありえん。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Black ash? Impossible.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "何を撃った。",
+        "reading": "何を撃った。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "What did he hit?",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "不安定なものだ。",
+        "reading": "不安定なものだ。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Something unstable.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "誤算",
+        "reading": "ごさん",
+        "romaji": "gosan",
+        "meaning": "miscalculation",
+        "note": "Mistaken calculation or plan."
+      },
+      {
+        "term": "止める",
+        "reading": "とめる",
+        "romaji": "tomeru",
+        "meaning": "to stop",
+        "note": "Transitive verb."
+      },
+      {
+        "term": "黒い灰",
+        "reading": "くろいはい",
+        "romaji": "kuroi hai",
+        "meaning": "black ash",
+        "note": "Threatening image phrase."
+      },
+      {
+        "term": "撃つ",
+        "reading": "うつ",
+        "romaji": "utsu",
+        "meaning": "to shoot",
+        "note": "Attack verb."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and opening beat",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Upper story text",
+        "rect": {
+          "x": 0.02,
+          "y": 0.24,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Middle panels",
+        "rect": {
+          "x": 0.02,
+          "y": 0.48,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Final panel",
+        "rect": {
+          "x": 0.02,
+          "y": 0.73,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

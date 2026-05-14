@@ -1,0 +1,156 @@
+{
+  "laneId": "contextual-situation",
+  "laneName": "Contextual Situation",
+  "bookId": "tokyo-train-quest",
+  "pageId": "page-001",
+  "pageNumber": 1,
+  "pageTitle": "First Commute",
+  "displayTitle": "ページ1 はじめての通勤",
+  "chapterNumber": "02",
+  "chapterName": "The First Commute",
+  "chapter": "Chapter 02: The First Commute",
+  "image": "page-001-first-commute.png",
+  "width": 1024,
+  "height": 1536,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "今日から東京で初出勤。",
+        "reading": "きょうから とうきょうで はつしゅっきん。",
+        "romaji": "Kyo kara Tokyo de hatsu-shukkin.",
+        "english": "My first commute to work in Tokyo starts today.",
+        "note": "から marks the starting point, and で marks Tokyo as the place."
+      },
+      {
+        "japanese": "人が多いなあ。でも、行ってみよう。",
+        "reading": "ひとが おおいなあ。でも、いってみよう。",
+        "romaji": "Hito ga oi na. Demo, itte miyou.",
+        "english": "There are so many people, but okay, let us try.",
+        "note": "てみよう means “let us try doing it.”"
+      },
+      {
+        "japanese": "駅まで来れば、なんとかなるよね。",
+        "reading": "えきまで くれば、なんとか なるよね。",
+        "romaji": "Eki made kureba, nantoka naru yo ne.",
+        "english": "Once I get to the station, I will figure it out, right?",
+        "note": "くれば is the conditional “if/when I come.”"
+      },
+      {
+        "japanese": "朝の駅は人が多いので、立ち止まる時は端によります。",
+        "reading": "あさの えきは ひとが おおいので、たちどまる ときは はしに よります。",
+        "romaji": "Asa no eki wa hito ga oi node, tachidomaru toki wa hashi ni yorimasu.",
+        "english": "Morning stations are crowded, so step to the side if you need to stop.",
+        "note": "ので gives a reason; 時 marks “when.”"
+      },
+      {
+        "japanese": "よし、行こう。",
+        "reading": "よし、いこう。",
+        "romaji": "Yoshi, iko.",
+        "english": "Okay, let us go.",
+        "note": "行こう is the volitional “let us go.”"
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "通勤",
+        "reading": "つうきん",
+        "romaji": "tsukin",
+        "meaning": "commute to work",
+        "note": "Work-travel noun."
+      },
+      {
+        "term": "初出勤",
+        "reading": "はつしゅっきん",
+        "romaji": "hatsu-shukkin",
+        "meaning": "first day commuting to work",
+        "note": "初 means first."
+      },
+      {
+        "term": "駅入口",
+        "reading": "えきいりぐち",
+        "romaji": "eki iriguchi",
+        "meaning": "station entrance",
+        "note": "Common station sign."
+      },
+      {
+        "term": "改札",
+        "reading": "かいさつ",
+        "romaji": "kaisatsu",
+        "meaning": "ticket gate",
+        "note": "Gate area for entering."
+      },
+      {
+        "term": "立ち止まる",
+        "reading": "たちどまる",
+        "romaji": "tachidomaru",
+        "meaning": "to stop walking",
+        "note": "Useful crowd etiquette verb."
+      },
+      {
+        "term": "端",
+        "reading": "はし",
+        "romaji": "hashi",
+        "meaning": "side or edge",
+        "note": "Place to move when stopping."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Title and station entrance signs",
+        "rect": {
+          "x": 0.02,
+          "y": 0.02,
+          "w": 0.96,
+          "h": 0.3
+        },
+        "scale": 2.2
+      },
+      {
+        "label": "Crowd reaction",
+        "rect": {
+          "x": 0.02,
+          "y": 0.34,
+          "w": 0.96,
+          "h": 0.2
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Ticket gate approach",
+        "rect": {
+          "x": 0.02,
+          "y": 0.55,
+          "w": 0.96,
+          "h": 0.18
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Morning station etiquette",
+        "rect": {
+          "x": 0.02,
+          "y": 0.74,
+          "w": 0.46,
+          "h": 0.23
+        },
+        "scale": 2.5
+      },
+      {
+        "label": "Map and action phrase",
+        "rect": {
+          "x": 0.5,
+          "y": 0.74,
+          "w": 0.48,
+          "h": 0.23
+        },
+        "scale": 2.4
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Tokyo train commuting comic page image",
+    "importDate": "2026-05-14"
+  }
+}

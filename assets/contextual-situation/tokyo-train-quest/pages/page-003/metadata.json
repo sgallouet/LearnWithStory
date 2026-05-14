@@ -1,0 +1,156 @@
+{
+  "laneId": "contextual-situation",
+  "laneName": "Contextual Situation",
+  "bookId": "tokyo-train-quest",
+  "pageId": "page-003",
+  "pageNumber": 3,
+  "pageTitle": "Finding the Platform",
+  "displayTitle": "ページ3 ホームを探す",
+  "chapterNumber": "02",
+  "chapterName": "The First Commute",
+  "chapter": "Chapter 02: The First Commute",
+  "image": "page-003-find-platform.png",
+  "width": 941,
+  "height": 1672,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "標識がたくさんある。",
+        "reading": "ひょうしきが たくさん ある。",
+        "romaji": "Hyoshiki ga takusan aru.",
+        "english": "There are so many signs.",
+        "note": "が marks what exists; ある is used for things."
+      },
+      {
+        "japanese": "会社は新宿方面だから、こっちかな。",
+        "reading": "かいしゃは しんじゅくほうめん だから、こっちかな。",
+        "romaji": "Kaisha wa Shinjuku homen dakara, kotchi kana.",
+        "english": "My office is toward Shinjuku, so maybe this way.",
+        "note": "かな softens uncertainty: “I wonder/maybe.”"
+      },
+      {
+        "japanese": "まもなく、電車がまいります。黄色い線の内側までお下がりください。",
+        "reading": "まもなく、でんしゃが まいります。きいろい せんの うちがわまで おさがりください。",
+        "romaji": "Mamonaku, densha ga mairimasu. Kiiroi sen no uchigawa made osagari kudasai.",
+        "english": "The train will arrive shortly. Please stand behind the yellow line.",
+        "note": "まいります is a humble/polite form often heard in announcements."
+      },
+      {
+        "japanese": "方面を見るのが大事なんだね。",
+        "reading": "ほうめんを みるのが だいじなんだね。",
+        "romaji": "Homen o miru no ga daiji n da ne.",
+        "english": "So checking the direction is important.",
+        "note": "の turns the verb phrase into a noun-like idea."
+      },
+      {
+        "japanese": "方面は “toward / bound for”。線の名前だけでなく、行き先も確認します。",
+        "reading": "ほうめんは “toward / bound for”。せんの なまえだけでなく、いきさきも かくにんします。",
+        "romaji": "Homen wa toward / bound for. Sen no namae dake de naku, ikisaki mo kakunin shimasu.",
+        "english": "Homen means toward or bound for. Check the destination, not just the line name.",
+        "note": "だけでなく means “not only.”"
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "標識",
+        "reading": "ひょうしき",
+        "romaji": "hyoshiki",
+        "meaning": "sign",
+        "note": "A posted sign or marker."
+      },
+      {
+        "term": "方面",
+        "reading": "ほうめん",
+        "romaji": "homen",
+        "meaning": "direction; bound for",
+        "note": "Very common on station signs."
+      },
+      {
+        "term": "山手線",
+        "reading": "やまのてせん",
+        "romaji": "Yamanote-sen",
+        "meaning": "Yamanote Line",
+        "note": "Major JR Tokyo loop line."
+      },
+      {
+        "term": "黄色い線",
+        "reading": "きいろいせん",
+        "romaji": "kiiroi sen",
+        "meaning": "yellow line",
+        "note": "Safety marker on platforms."
+      },
+      {
+        "term": "内側",
+        "reading": "うちがわ",
+        "romaji": "uchigawa",
+        "meaning": "inside",
+        "note": "Opposite of 外側."
+      },
+      {
+        "term": "行き先",
+        "reading": "いきさき",
+        "romaji": "ikisaki",
+        "meaning": "destination",
+        "note": "Where something is going."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Overhead sign cluster",
+        "rect": {
+          "x": 0.02,
+          "y": 0.02,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.2
+      },
+      {
+        "label": "Direction decision",
+        "rect": {
+          "x": 0.02,
+          "y": 0.27,
+          "w": 0.96,
+          "h": 0.21
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Arrival announcement and platform sign",
+        "rect": {
+          "x": 0.02,
+          "y": 0.49,
+          "w": 0.96,
+          "h": 0.22
+        },
+        "scale": 2.2
+      },
+      {
+        "label": "Direction lesson",
+        "rect": {
+          "x": 0.02,
+          "y": 0.71,
+          "w": 0.96,
+          "h": 0.13
+        },
+        "scale": 2.5
+      },
+      {
+        "label": "Line and destination examples",
+        "rect": {
+          "x": 0.02,
+          "y": 0.85,
+          "w": 0.96,
+          "h": 0.13
+        },
+        "scale": 2.4
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Tokyo train commuting comic page image",
+    "importDate": "2026-05-14"
+  }
+}

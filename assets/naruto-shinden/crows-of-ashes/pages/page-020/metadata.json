@@ -1,0 +1,125 @@
+{
+  "laneId": "naruto-shinden",
+  "laneName": "Naruto Shinden",
+  "bookId": "crows-of-ashes",
+  "pageId": "page-020",
+  "pageNumber": 20,
+  "pageTitle": "What Remains",
+  "displayTitle": "ページ20 残るもの",
+  "chapterNumber": "01",
+  "chapterName": "The Crows of Ashes",
+  "chapter": "Chapter 01: The Crows of Ashes",
+  "image": "page-020-what-remains.png",
+  "width": 977,
+  "height": 1610,
+  "learning": {
+    "sentences": [
+      {
+        "japanese": "残るのは結果だけだ。原因は消えていく。",
+        "reading": "残るのは結果だけだ。原因は消えていく。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Results are what remain. Causes vanish.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "シグレは小さな祠を建て直した。",
+        "reading": "シグレは小さな祠を建て直した。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Shigure rebuilt the small shrine marker.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "木ノ葉には何も届かなかった。",
+        "reading": "木ノ葉には何も届かなかった。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "Nothing reached Konoha.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      },
+      {
+        "japanese": "それでも、どこかで村は守られていた。",
+        "reading": "それでも、どこかで村は守られていた。",
+        "romaji": "See kana reading; focus on phrase rhythm and particles.",
+        "english": "And yet, somewhere, the village had been protected.",
+        "note": "Use the English panel as meaning support, then compare particles and verb endings in the Japanese line."
+      }
+    ],
+    "vocabulary": [
+      {
+        "term": "残る",
+        "reading": "のこる",
+        "romaji": "nokoru",
+        "meaning": "to remain",
+        "note": "Key closing verb."
+      },
+      {
+        "term": "結果",
+        "reading": "けっか",
+        "romaji": "kekka",
+        "meaning": "result",
+        "note": "Outcome."
+      },
+      {
+        "term": "原因",
+        "reading": "げんいん",
+        "romaji": "genin",
+        "meaning": "cause",
+        "note": "Reason something happened."
+      },
+      {
+        "term": "祠",
+        "reading": "ほこら",
+        "romaji": "hokora",
+        "meaning": "small shrine",
+        "note": "Small sacred marker."
+      }
+    ]
+  },
+  "zoom": {
+    "points": [
+      {
+        "label": "Page title and opening beat",
+        "rect": {
+          "x": 0.02,
+          "y": 0.01,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.1
+      },
+      {
+        "label": "Upper story text",
+        "rect": {
+          "x": 0.02,
+          "y": 0.24,
+          "w": 0.96,
+          "h": 0.24
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Middle panels",
+        "rect": {
+          "x": 0.02,
+          "y": 0.48,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.3
+      },
+      {
+        "label": "Final panel",
+        "rect": {
+          "x": 0.02,
+          "y": 0.73,
+          "w": 0.96,
+          "h": 0.25
+        },
+        "scale": 2.1
+      }
+    ]
+  },
+  "metadata": {
+    "source": "User-supplied Naruto comic page image",
+    "importDate": "2026-05-14"
+  }
+}

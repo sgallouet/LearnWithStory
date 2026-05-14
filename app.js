@@ -16,6 +16,28 @@ const books = [
     ],
   },
   {
+    id: "tokyo-train-quest",
+    laneId: "contextual-situation",
+    laneName: "Contextual Situation",
+    title: "TOKYO TRAIN QUEST",
+    chapterNumber: "02",
+    chapterName: "The First Commute",
+    accent: "#2474bf",
+    coverBase: "assets/contextual-situation/tokyo-train-quest/covers",
+    hasWebp: false,
+    pages: [
+      "assets/contextual-situation/tokyo-train-quest/pages/page-001/metadata.json",
+      "assets/contextual-situation/tokyo-train-quest/pages/page-002/metadata.json",
+      "assets/contextual-situation/tokyo-train-quest/pages/page-003/metadata.json",
+      "assets/contextual-situation/tokyo-train-quest/pages/page-004/metadata.json",
+      "assets/contextual-situation/tokyo-train-quest/pages/page-005/metadata.json",
+      "assets/contextual-situation/tokyo-train-quest/pages/page-006/metadata.json",
+      "assets/contextual-situation/tokyo-train-quest/pages/page-007/metadata.json",
+      "assets/contextual-situation/tokyo-train-quest/pages/page-008/metadata.json",
+      "assets/contextual-situation/tokyo-train-quest/pages/page-009/metadata.json",
+    ],
+  },
+  {
     id: "nodeheart-luminus",
     laneId: "nodeheart-series",
     laneName: "Nodeheart Series",
@@ -30,6 +52,39 @@ const books = [
       "assets/nodeheart-series/nodeheart-luminus/pages/page-003/metadata.json",
       "assets/nodeheart-series/nodeheart-luminus/pages/page-004/metadata.json",
       "assets/nodeheart-series/nodeheart-luminus/pages/page-005/metadata.json",
+    ],
+  },
+  {
+    id: "crows-of-ashes",
+    laneId: "naruto-shinden",
+    laneName: "Naruto Shinden",
+    title: "NARUTO: THE CROWS OF ASHES",
+    chapterNumber: "01",
+    chapterName: "The Crows of Ashes",
+    accent: "#c9362c",
+    coverBase: "assets/naruto-shinden/crows-of-ashes/covers",
+    hasWebp: false,
+    pages: [
+      "assets/naruto-shinden/crows-of-ashes/pages/page-001/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-002/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-003/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-004/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-005/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-006/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-007/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-008/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-009/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-010/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-011/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-012/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-013/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-014/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-015/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-016/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-017/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-018/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-019/metadata.json",
+      "assets/naruto-shinden/crows-of-ashes/pages/page-020/metadata.json",
     ],
   },
 ];
@@ -173,7 +228,9 @@ function coverAssetUrls(book) {
   const urls = [absoluteUrl(`${book.coverBase}/cover-original.png`)];
 
   for (const width of widths) {
-    urls.push(absoluteUrl(`${book.coverBase}/cover-${width}.webp`));
+    if (book.hasWebp !== false) {
+      urls.push(absoluteUrl(`${book.coverBase}/cover-${width}.webp`));
+    }
     urls.push(absoluteUrl(`${book.coverBase}/cover-${width}.jpg`));
   }
 
@@ -309,8 +366,8 @@ function preloadReaderNeighbors() {
 }
 
 function coverSources(book) {
-  return {
-    webp: [
+  const sources = {
+    webp: book.hasWebp === false ? "" : [
       `${book.coverBase}/cover-480.webp 480w`,
       `${book.coverBase}/cover-720.webp 720w`,
       `${book.coverBase}/cover-960.webp 960w`,
@@ -324,22 +381,27 @@ function coverSources(book) {
     ].join(", "),
     fallback: `${book.coverBase}/cover-original.png`,
   };
+
+  return sources;
 }
 
 function createCoverPicture(book, loading) {
   const sources = coverSources(book);
   const picture = document.createElement("picture");
-  const webp = document.createElement("source");
   const jpg = document.createElement("source");
   const img = document.createElement("img");
 
-  webp.type = "image/webp";
-  webp.srcset = sources.webp;
-  webp.sizes = "(max-width: 760px) 84vw, 430px";
+  if (sources.webp) {
+    const webp = document.createElement("source");
+    webp.type = "image/webp";
+    webp.srcset = sources.webp;
+    webp.sizes = "(max-width: 760px) 84vw, 430px";
+    picture.append(webp);
+  }
 
   jpg.type = "image/jpeg";
   jpg.srcset = sources.jpg;
-  jpg.sizes = webp.sizes;
+  jpg.sizes = "(max-width: 760px) 84vw, 430px";
 
   img.src = sources.fallback;
   img.alt = `${book.title} cover`;
@@ -349,7 +411,7 @@ function createCoverPicture(book, loading) {
   img.decoding = "async";
   img.fetchPriority = loading === "eager" ? "high" : "auto";
 
-  picture.append(webp, jpg, img);
+  picture.append(jpg, img);
   return picture;
 }
 
