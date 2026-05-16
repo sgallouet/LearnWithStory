@@ -96,56 +96,261 @@
     ]
   },
   "zoom": {
+    "frames": [
+      {
+        "id": "frame1",
+        "label": "Frame 1",
+        "polygon": [
+          {
+            "x": 0.0189,
+            "y": 0.0118
+          },
+          {
+            "x": 0.9801000000000001,
+            "y": 0.0118
+          },
+          {
+            "x": 0.9801000000000001,
+            "y": 0.2377
+          },
+          {
+            "x": 0.0189,
+            "y": 0.2377
+          }
+        ]
+      },
+      {
+        "id": "frame2",
+        "label": "Frame 2",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.2492
+          },
+          {
+            "x": 0.996,
+            "y": 0.2492
+          },
+          {
+            "x": 0.996,
+            "y": 0.6084
+          },
+          {
+            "x": 0.004,
+            "y": 0.6084
+          }
+        ]
+      },
+      {
+        "id": "frame3",
+        "label": "Frame 3",
+        "polygon": [
+          {
+            "x": 0.0178,
+            "y": 0.6194
+          },
+          {
+            "x": 0.9800000000000001,
+            "y": 0.6194
+          },
+          {
+            "x": 0.9800000000000001,
+            "y": 0.7812999999999999
+          },
+          {
+            "x": 0.0178,
+            "y": 0.7812999999999999
+          }
+        ]
+      },
+      {
+        "id": "frame4",
+        "label": "Frame 4",
+        "polygon": [
+          {
+            "x": 0.0178,
+            "y": 0.7923
+          },
+          {
+            "x": 0.9811000000000001,
+            "y": 0.7923
+          },
+          {
+            "x": 0.9811000000000001,
+            "y": 0.9871
+          },
+          {
+            "x": 0.0178,
+            "y": 0.9871
+          }
+        ]
+      }
+    ],
     "points": [
       {
-        "label": "Title and quiet train thought",
+        "label": "Frame 1 area 1",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.02,
-          "w": 0.96,
-          "h": 0.24
+          "x": 0.0189,
+          "y": 0.0118,
+          "w": 0.3204,
+          "h": 0.2259
         },
-        "scale": 2.1
+        "scale": 2.9
       },
       {
-        "label": "Priority seat and silent mode signs",
+        "label": "Frame 1 area 2",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.25,
-          "w": 0.96,
-          "h": 0.2
+          "x": 0.3393,
+          "y": 0.0118,
+          "w": 0.3204,
+          "h": 0.2259
         },
-        "scale": 2.3
+        "scale": 2.9
       },
       {
-        "label": "Next station announcement",
+        "label": "Frame 1 area 3",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.47,
-          "w": 0.96,
-          "h": 0.17
+          "x": 0.6597,
+          "y": 0.0118,
+          "w": 0.3204,
+          "h": 0.2259
         },
-        "scale": 2.4
+        "scale": 2.9
       },
       {
-        "label": "Phone-call etiquette",
+        "label": "Frame 2 area 1",
+        "frameId": "frame2",
         "rect": {
-          "x": 0.02,
-          "y": 0.64,
-          "w": 0.96,
-          "h": 0.16
+          "x": 0.004,
+          "y": 0.2492,
+          "w": 0.3307,
+          "h": 0.1796
         },
-        "scale": 2.4
+        "scale": 2.9
       },
       {
-        "label": "Manners summary",
+        "label": "Frame 2 area 2",
+        "frameId": "frame2",
         "rect": {
-          "x": 0.02,
-          "y": 0.82,
-          "w": 0.96,
-          "h": 0.16
+          "x": 0.3347,
+          "y": 0.2492,
+          "w": 0.3307,
+          "h": 0.1796
         },
-        "scale": 2.3
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 3",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.2492,
+          "w": 0.3307,
+          "h": 0.1796
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 4",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.004,
+          "y": 0.4288,
+          "w": 0.3307,
+          "h": 0.1796
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 5",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.4288,
+          "w": 0.3307,
+          "h": 0.1796
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 6",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.4288,
+          "w": 0.3307,
+          "h": 0.1796
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 1",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.0178,
+          "y": 0.6194,
+          "w": 0.3207,
+          "h": 0.1619
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 2",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.3385,
+          "y": 0.6194,
+          "w": 0.3207,
+          "h": 0.1619
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 3",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.6593,
+          "y": 0.6194,
+          "w": 0.3207,
+          "h": 0.1619
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 4 area 1",
+        "frameId": "frame4",
+        "rect": {
+          "x": 0.0178,
+          "y": 0.7923,
+          "w": 0.3211,
+          "h": 0.1948
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 4 area 2",
+        "frameId": "frame4",
+        "rect": {
+          "x": 0.3389,
+          "y": 0.7923,
+          "w": 0.3211,
+          "h": 0.1948
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 4 area 3",
+        "frameId": "frame4",
+        "rect": {
+          "x": 0.66,
+          "y": 0.7923,
+          "w": 0.3211,
+          "h": 0.1948
+        },
+        "scale": 2.9
       }
     ]
   },

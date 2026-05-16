@@ -117,66 +117,316 @@
     ]
   },
   "zoom": {
+    "frames": [
+      {
+        "id": "frame1",
+        "label": "Frame 1",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.0099
+          },
+          {
+            "x": 0.996,
+            "y": 0.0099
+          },
+          {
+            "x": 0.996,
+            "y": 0.3513
+          },
+          {
+            "x": 0.004,
+            "y": 0.3513
+          }
+        ]
+      },
+      {
+        "id": "frame2",
+        "label": "Frame 2",
+        "polygon": [
+          {
+            "x": 0.0128,
+            "y": 0.3644
+          },
+          {
+            "x": 0.9882000000000001,
+            "y": 0.3644
+          },
+          {
+            "x": 0.9882000000000001,
+            "y": 0.6329
+          },
+          {
+            "x": 0.0128,
+            "y": 0.6329
+          }
+        ]
+      },
+      {
+        "id": "frame3",
+        "label": "Frame 3",
+        "polygon": [
+          {
+            "x": 0.0128,
+            "y": 0.6468
+          },
+          {
+            "x": 0.9882000000000001,
+            "y": 0.6468
+          },
+          {
+            "x": 0.9882000000000001,
+            "y": 0.7852
+          },
+          {
+            "x": 0.0128,
+            "y": 0.7852
+          }
+        ]
+      },
+      {
+        "id": "frame4",
+        "label": "Frame 4",
+        "polygon": [
+          {
+            "x": 0.0128,
+            "y": 0.7991
+          },
+          {
+            "x": 0.4085,
+            "y": 0.7991
+          },
+          {
+            "x": 0.4085,
+            "y": 0.9921
+          },
+          {
+            "x": 0.0128,
+            "y": 0.9921
+          }
+        ]
+      },
+      {
+        "id": "frame5",
+        "label": "Frame 5",
+        "polygon": [
+          {
+            "x": 0.4243,
+            "y": 0.7991
+          },
+          {
+            "x": 0.996,
+            "y": 0.7991
+          },
+          {
+            "x": 0.996,
+            "y": 0.9921
+          },
+          {
+            "x": 0.4243,
+            "y": 0.9921
+          }
+        ]
+      }
+    ],
     "points": [
       {
-        "label": "Arena cheers echo",
+        "label": "Frame 1 area 1",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.02,
-          "w": 0.96,
-          "h": 0.35
+          "x": 0.004,
+          "y": 0.0099,
+          "w": 0.3307,
+          "h": 0.1707
         },
-        "scale": 1.55
+        "scale": 2.9
       },
       {
-        "label": "Special match announcement",
+        "label": "Frame 1 area 2",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.37,
-          "w": 0.96,
-          "h": 0.27
+          "x": 0.3347,
+          "y": 0.0099,
+          "w": 0.3307,
+          "h": 0.1707
         },
-        "scale": 1.7
+        "scale": 2.9
       },
       {
-        "label": "Crowd roars",
+        "label": "Frame 1 area 3",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.64,
-          "w": 0.96,
-          "h": 0.15
+          "x": 0.6653,
+          "y": 0.0099,
+          "w": 0.3307,
+          "h": 0.1707
         },
-        "scale": 1.9
+        "scale": 2.9
       },
       {
-        "label": "Survival rule",
+        "label": "Frame 1 area 4",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.79,
-          "w": 0.42,
-          "h": 0.2
+          "x": 0.004,
+          "y": 0.1806,
+          "w": 0.3307,
+          "h": 0.1707
         },
-        "scale": 2.2
+        "scale": 2.9
       },
       {
-        "label": "Rio steels himself",
+        "label": "Frame 1 area 5",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.43,
-          "y": 0.79,
-          "w": 0.31,
-          "h": 0.2
+          "x": 0.3347,
+          "y": 0.1806,
+          "w": 0.3307,
+          "h": 0.1707
         },
-        "scale": 2.1
+        "scale": 2.9
       },
       {
-        "label": "Hidden eye watches",
+        "label": "Frame 1 area 6",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.74,
-          "y": 0.79,
-          "w": 0.24,
-          "h": 0.2
+          "x": 0.6653,
+          "y": 0.1806,
+          "w": 0.3307,
+          "h": 0.1707
         },
-        "scale": 2.3
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 1",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.0128,
+          "y": 0.3644,
+          "w": 0.3251,
+          "h": 0.1343
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 2",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.3379,
+          "y": 0.3644,
+          "w": 0.3251,
+          "h": 0.1343
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 3",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.6631,
+          "y": 0.3644,
+          "w": 0.3251,
+          "h": 0.1343
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 4",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.0128,
+          "y": 0.4987,
+          "w": 0.3251,
+          "h": 0.1342
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 5",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.3379,
+          "y": 0.4987,
+          "w": 0.3251,
+          "h": 0.1342
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 6",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.6631,
+          "y": 0.4987,
+          "w": 0.3251,
+          "h": 0.1342
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 1",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.0128,
+          "y": 0.6468,
+          "w": 0.3251,
+          "h": 0.1384
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 2",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.3379,
+          "y": 0.6468,
+          "w": 0.3251,
+          "h": 0.1384
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 3",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.6631,
+          "y": 0.6468,
+          "w": 0.3251,
+          "h": 0.1384
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 4 area 1",
+        "frameId": "frame4",
+        "rect": {
+          "x": 0.0128,
+          "y": 0.7991,
+          "w": 0.3957,
+          "h": 0.193
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 5 area 1",
+        "frameId": "frame5",
+        "rect": {
+          "x": 0.4243,
+          "y": 0.7991,
+          "w": 0.2859,
+          "h": 0.193
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 5 area 2",
+        "frameId": "frame5",
+        "rect": {
+          "x": 0.7102,
+          "y": 0.7991,
+          "w": 0.2858,
+          "h": 0.193
+        },
+        "scale": 2.9
       }
     ]
   },

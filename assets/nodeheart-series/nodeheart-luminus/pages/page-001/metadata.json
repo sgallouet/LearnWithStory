@@ -117,76 +117,195 @@
     ]
   },
   "zoom": {
+    "frames": [
+      {
+        "id": "frame1",
+        "label": "Frame 1",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.0079
+          },
+          {
+            "x": 0.996,
+            "y": 0.0079
+          },
+          {
+            "x": 0.996,
+            "y": 0.9921
+          },
+          {
+            "x": 0.004,
+            "y": 0.9921
+          }
+        ]
+      }
+    ],
     "points": [
       {
-        "label": "Demand before the throne",
+        "label": "Frame 1 area 1",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.03,
-          "y": 0.07,
-          "w": 0.95,
-          "h": 0.31
+          "x": 0.004,
+          "y": 0.0079,
+          "w": 0.3307,
+          "h": 0.1968
         },
-        "scale": 1.6
+        "scale": 2.9
       },
       {
-        "label": "King Hammer mocks Rio",
+        "label": "Frame 1 area 2",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.39,
-          "w": 0.48,
-          "h": 0.19
+          "x": 0.3347,
+          "y": 0.0079,
+          "w": 0.3307,
+          "h": 0.1968
         },
-        "scale": 2.25
+        "scale": 2.9
       },
       {
-        "label": "Family cannot be bought",
+        "label": "Frame 1 area 3",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.51,
-          "y": 0.39,
-          "w": 0.47,
-          "h": 0.19
+          "x": 0.6653,
+          "y": 0.0079,
+          "w": 0.3307,
+          "h": 0.1968
         },
-        "scale": 2.25
+        "scale": 2.9
       },
       {
-        "label": "The king makes the rules",
+        "label": "Frame 1 area 4",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.59,
-          "w": 0.47,
-          "h": 0.18
+          "x": 0.004,
+          "y": 0.2047,
+          "w": 0.3307,
+          "h": 0.1968
         },
-        "scale": 2.25
+        "scale": 2.9
       },
       {
-        "label": "The captive sister",
+        "label": "Frame 1 area 5",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.5,
-          "y": 0.59,
-          "w": 0.48,
-          "h": 0.18
+          "x": 0.3347,
+          "y": 0.2047,
+          "w": 0.3307,
+          "h": 0.1968
         },
-        "scale": 1.9
+        "scale": 2.9
       },
       {
-        "label": "Rio vows to take her back",
+        "label": "Frame 1 area 6",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.79,
-          "w": 0.55,
-          "h": 0.2
+          "x": 0.6653,
+          "y": 0.2047,
+          "w": 0.3307,
+          "h": 0.1968
         },
-        "scale": 2
+        "scale": 2.9
       },
       {
-        "label": "Next meal threat",
+        "label": "Frame 1 area 7",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.59,
-          "y": 0.79,
-          "w": 0.39,
-          "h": 0.2
+          "x": 0.004,
+          "y": 0.4016,
+          "w": 0.3307,
+          "h": 0.1968
         },
-        "scale": 2.25
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 8",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.4016,
+          "w": 0.3307,
+          "h": 0.1968
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 9",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.4016,
+          "w": 0.3307,
+          "h": 0.1968
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 10",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.004,
+          "y": 0.5984,
+          "w": 0.3307,
+          "h": 0.1968
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 11",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.5984,
+          "w": 0.3307,
+          "h": 0.1968
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 12",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.5984,
+          "w": 0.3307,
+          "h": 0.1968
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 13",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.004,
+          "y": 0.7953,
+          "w": 0.3307,
+          "h": 0.1968
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 14",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.7953,
+          "w": 0.3307,
+          "h": 0.1968
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 15",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.7953,
+          "w": 0.3307,
+          "h": 0.1968
+        },
+        "scale": 2.9
       }
     ]
   },

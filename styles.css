@@ -300,6 +300,50 @@ img {
   object-fit: contain;
 }
 
+.zoom-spotlight {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.zoom-spotlight-image,
+.zoom-focus-outline {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.zoom-spotlight-image {
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  filter: blur(3.5px) brightness(0.48) saturate(0.72);
+  opacity: 0.94;
+  mask-mode: alpha;
+  mask-position: 0 0;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-position: 0 0;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+}
+
+.zoom-focus-outline {
+  overflow: visible;
+  filter: drop-shadow(0 0 12px rgba(226, 173, 84, 0.2));
+}
+
+.zoom-focus-polygon {
+  fill: transparent;
+  stroke: rgba(247, 241, 232, 0.34);
+  stroke-linejoin: round;
+  stroke-width: 0.16;
+  vector-effect: non-scaling-stroke;
+}
+
 .reader-topbar,
 .reader-controls {
   position: fixed;

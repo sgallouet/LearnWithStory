@@ -96,56 +96,294 @@
     ]
   },
   "zoom": {
+    "frames": [
+      {
+        "id": "frame1",
+        "label": "Station entrance opening panel",
+        "polygon": [
+          {
+            "x": 0.008,
+            "y": 0.008
+          },
+          {
+            "x": 0.992,
+            "y": 0.008
+          },
+          {
+            "x": 0.992,
+            "y": 0.337
+          },
+          {
+            "x": 0.008,
+            "y": 0.337
+          }
+        ]
+      },
+      {
+        "id": "frame2",
+        "label": "Crowded sidewalk hesitation panel",
+        "polygon": [
+          {
+            "x": 0.008,
+            "y": 0.348
+          },
+          {
+            "x": 0.992,
+            "y": 0.348
+          },
+          {
+            "x": 0.992,
+            "y": 0.553
+          },
+          {
+            "x": 0.008,
+            "y": 0.553
+          }
+        ]
+      },
+      {
+        "id": "frame3",
+        "label": "Ticket gate approach panel",
+        "polygon": [
+          {
+            "x": 0.008,
+            "y": 0.562
+          },
+          {
+            "x": 0.992,
+            "y": 0.562
+          },
+          {
+            "x": 0.992,
+            "y": 0.744
+          },
+          {
+            "x": 0.008,
+            "y": 0.744
+          }
+        ]
+      },
+      {
+        "id": "frame4",
+        "label": "Morning etiquette panel",
+        "polygon": [
+          {
+            "x": 0.008,
+            "y": 0.754
+          },
+          {
+            "x": 0.506,
+            "y": 0.754
+          },
+          {
+            "x": 0.506,
+            "y": 0.992
+          },
+          {
+            "x": 0.008,
+            "y": 0.992
+          }
+        ]
+      },
+      {
+        "id": "frame5",
+        "label": "Ready to go panel",
+        "polygon": [
+          {
+            "x": 0.516,
+            "y": 0.754
+          },
+          {
+            "x": 0.992,
+            "y": 0.754
+          },
+          {
+            "x": 0.992,
+            "y": 0.992
+          },
+          {
+            "x": 0.516,
+            "y": 0.992
+          }
+        ]
+      }
+    ],
     "points": [
       {
-        "label": "Title and station entrance signs",
+        "label": "Page title",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.02,
-          "w": 0.96,
-          "h": 0.3
+          "x": 0.008,
+          "y": 0.008,
+          "w": 0.235,
+          "h": 0.15
         },
-        "scale": 2.2
+        "scale": 2.9
       },
       {
-        "label": "Crowd reaction",
+        "label": "Station entrance and commuter",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.34,
-          "w": 0.96,
+          "x": 0.235,
+          "y": 0.028,
+          "w": 0.38,
+          "h": 0.19
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "First commute thought",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.52,
+          "y": 0.11,
+          "w": 0.28,
           "h": 0.2
         },
-        "scale": 2.3
+        "scale": 2.9
       },
       {
-        "label": "Ticket gate approach",
+        "label": "Entrance sign and route sign",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.55,
-          "w": 0.96,
+          "x": 0.47,
+          "y": 0.035,
+          "w": 0.45,
+          "h": 0.095
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Opening panel lower scene",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.1,
+          "y": 0.19,
+          "w": 0.42,
+          "h": 0.13
+        },
+        "scale": 2.7
+      },
+      {
+        "label": "Opening panel right crowd",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.62,
+          "y": 0.19,
+          "w": 0.34,
+          "h": 0.13
+        },
+        "scale": 2.7
+      },
+      {
+        "label": "Crowd hesitation thought",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.012,
+          "y": 0.355,
+          "w": 0.25,
+          "h": 0.19
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Commuter close-up",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.25,
+          "y": 0.36,
+          "w": 0.26,
           "h": 0.18
         },
-        "scale": 2.3
+        "scale": 2.9
+      },
+      {
+        "label": "Crowd flow",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.52,
+          "y": 0.355,
+          "w": 0.42,
+          "h": 0.18
+        },
+        "scale": 2.7
+      },
+      {
+        "label": "Ticket gate sign",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.405,
+          "y": 0.583,
+          "w": 0.33,
+          "h": 0.085
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Gate approach",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.05,
+          "y": 0.595,
+          "w": 0.35,
+          "h": 0.12
+        },
+        "scale": 2.8
+      },
+      {
+        "label": "Figure it out thought",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.74,
+          "y": 0.56,
+          "w": 0.24,
+          "h": 0.17
+        },
+        "scale": 2.9
       },
       {
         "label": "Morning station etiquette",
+        "frameId": "frame4",
         "rect": {
-          "x": 0.02,
-          "y": 0.74,
-          "w": 0.46,
-          "h": 0.23
+          "x": 0.01,
+          "y": 0.758,
+          "w": 0.19,
+          "h": 0.205
         },
-        "scale": 2.5
+        "scale": 2.9
       },
       {
-        "label": "Map and action phrase",
+        "label": "Commuter side-step scene",
+        "frameId": "frame4",
         "rect": {
-          "x": 0.5,
-          "y": 0.74,
-          "w": 0.48,
-          "h": 0.23
+          "x": 0.18,
+          "y": 0.765,
+          "w": 0.3,
+          "h": 0.21
         },
-        "scale": 2.4
+        "scale": 2.8
+      },
+      {
+        "label": "Ready to go close-up",
+        "frameId": "frame5",
+        "rect": {
+          "x": 0.535,
+          "y": 0.77,
+          "w": 0.25,
+          "h": 0.2
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Okay let us go",
+        "frameId": "frame5",
+        "rect": {
+          "x": 0.77,
+          "y": 0.84,
+          "w": 0.21,
+          "h": 0.13
+        },
+        "scale": 2.9
       }
     ]
   },

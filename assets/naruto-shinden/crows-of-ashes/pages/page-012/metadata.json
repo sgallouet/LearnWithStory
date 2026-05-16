@@ -75,46 +75,250 @@
     ]
   },
   "zoom": {
+    "frames": [
+      {
+        "id": "frame1",
+        "label": "Frame 1",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.004
+          },
+          {
+            "x": 0.996,
+            "y": 0.004
+          },
+          {
+            "x": 0.996,
+            "y": 0.8264
+          },
+          {
+            "x": 0.004,
+            "y": 0.8264
+          }
+        ]
+      },
+      {
+        "id": "frame2",
+        "label": "Frame 2",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.845
+          },
+          {
+            "x": 0.8701,
+            "y": 0.845
+          },
+          {
+            "x": 0.8701,
+            "y": 0.996
+          },
+          {
+            "x": 0.004,
+            "y": 0.996
+          }
+        ]
+      },
+      {
+        "id": "frame3",
+        "label": "Frame 3",
+        "polygon": [
+          {
+            "x": 0.8986,
+            "y": 0.845
+          },
+          {
+            "x": 0.996,
+            "y": 0.845
+          },
+          {
+            "x": 0.996,
+            "y": 0.996
+          },
+          {
+            "x": 0.8986,
+            "y": 0.996
+          }
+        ]
+      }
+    ],
     "points": [
       {
-        "label": "Page title and opening beat",
+        "label": "Frame 1 area 1",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.01,
-          "w": 0.96,
-          "h": 0.24
+          "x": 0.004,
+          "y": 0.004,
+          "w": 0.3307,
+          "h": 0.2056
         },
-        "scale": 2.1
+        "scale": 2.9
       },
       {
-        "label": "Upper story text",
+        "label": "Frame 1 area 2",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.24,
-          "w": 0.96,
-          "h": 0.24
+          "x": 0.3347,
+          "y": 0.004,
+          "w": 0.3307,
+          "h": 0.2056
         },
-        "scale": 2.3
+        "scale": 2.9
       },
       {
-        "label": "Middle panels",
+        "label": "Frame 1 area 3",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.48,
-          "w": 0.96,
-          "h": 0.25
+          "x": 0.6653,
+          "y": 0.004,
+          "w": 0.3307,
+          "h": 0.2056
         },
-        "scale": 2.3
+        "scale": 2.9
       },
       {
-        "label": "Final panel",
+        "label": "Frame 1 area 4",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.73,
-          "w": 0.96,
-          "h": 0.25
+          "x": 0.004,
+          "y": 0.2096,
+          "w": 0.3307,
+          "h": 0.2056
         },
-        "scale": 2.1
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 5",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.2096,
+          "w": 0.3307,
+          "h": 0.2056
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 6",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.2096,
+          "w": 0.3307,
+          "h": 0.2056
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 7",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.004,
+          "y": 0.4152,
+          "w": 0.3307,
+          "h": 0.2056
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 8",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.4152,
+          "w": 0.3307,
+          "h": 0.2056
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 9",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.4152,
+          "w": 0.3307,
+          "h": 0.2056
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 10",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.004,
+          "y": 0.6208,
+          "w": 0.3307,
+          "h": 0.2056
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 11",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.6208,
+          "w": 0.3307,
+          "h": 0.2056
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 12",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.6208,
+          "w": 0.3307,
+          "h": 0.2056
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 1",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.004,
+          "y": 0.845,
+          "w": 0.2887,
+          "h": 0.151
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 2",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.2927,
+          "y": 0.845,
+          "w": 0.2887,
+          "h": 0.151
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 3",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.5814,
+          "y": 0.845,
+          "w": 0.2887,
+          "h": 0.151
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 1",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.8986,
+          "y": 0.845,
+          "w": 0.0974,
+          "h": 0.151
+        },
+        "scale": 2.9
       }
     ]
   },

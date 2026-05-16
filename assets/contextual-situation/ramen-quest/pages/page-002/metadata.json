@@ -103,86 +103,250 @@
     ]
   },
   "zoom": {
+    "frames": [
+      {
+        "id": "frame1",
+        "label": "Frame 1",
+        "polygon": [
+          {
+            "x": 0.019,
+            "y": 0.0195
+          },
+          {
+            "x": 0.8272,
+            "y": 0.0195
+          },
+          {
+            "x": 0.8272,
+            "y": 0.1769
+          },
+          {
+            "x": 0.019,
+            "y": 0.1769
+          }
+        ]
+      },
+      {
+        "id": "frame2",
+        "label": "Frame 2",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.2449
+          },
+          {
+            "x": 0.996,
+            "y": 0.2449
+          },
+          {
+            "x": 0.996,
+            "y": 0.6295
+          },
+          {
+            "x": 0.004,
+            "y": 0.6295
+          }
+        ]
+      },
+      {
+        "id": "frame3",
+        "label": "Frame 3",
+        "polygon": [
+          {
+            "x": 0.019,
+            "y": 0.653
+          },
+          {
+            "x": 0.9159,
+            "y": 0.653
+          },
+          {
+            "x": 0.9159,
+            "y": 0.8003
+          },
+          {
+            "x": 0.019,
+            "y": 0.8003
+          }
+        ]
+      },
+      {
+        "id": "frame4",
+        "label": "Frame 4",
+        "polygon": [
+          {
+            "x": 0.019,
+            "y": 0.8327
+          },
+          {
+            "x": 0.98,
+            "y": 0.8327
+          },
+          {
+            "x": 0.98,
+            "y": 0.9877
+          },
+          {
+            "x": 0.019,
+            "y": 0.9877
+          }
+        ]
+      }
+    ],
     "points": [
       {
-        "label": "Welcome",
+        "label": "Frame 1 area 1",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.24,
-          "y": 0.02,
-          "w": 0.62,
-          "h": 0.18
+          "x": 0.019,
+          "y": 0.0195,
+          "w": 0.4041,
+          "h": 0.1574
         },
-        "scale": 2.1
+        "scale": 2.9
       },
       {
-        "label": "One person",
+        "label": "Frame 1 area 2",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.24,
-          "w": 0.48,
-          "h": 0.21
+          "x": 0.4231,
+          "y": 0.0195,
+          "w": 0.4041,
+          "h": 0.1574
         },
-        "scale": 2.25
+        "scale": 2.9
       },
       {
-        "label": "Where are you from",
+        "label": "Frame 2 area 1",
+        "frameId": "frame2",
         "rect": {
-          "x": 0.51,
-          "y": 0.24,
-          "w": 0.47,
-          "h": 0.21
+          "x": 0.004,
+          "y": 0.2449,
+          "w": 0.3307,
+          "h": 0.1923
         },
-        "scale": 2.25
+        "scale": 2.9
       },
       {
-        "label": "Ramen flavors",
+        "label": "Frame 2 area 2",
+        "frameId": "frame2",
         "rect": {
-          "x": 0.03,
-          "y": 0.46,
-          "w": 0.94,
-          "h": 0.19
+          "x": 0.3347,
+          "y": 0.2449,
+          "w": 0.3307,
+          "h": 0.1923
         },
-        "scale": 1.65
+        "scale": 2.9
       },
       {
-        "label": "Tonkotsu order",
+        "label": "Frame 2 area 3",
+        "frameId": "frame2",
         "rect": {
-          "x": 0.02,
-          "y": 0.66,
-          "w": 0.48,
-          "h": 0.17
+          "x": 0.6653,
+          "y": 0.2449,
+          "w": 0.3307,
+          "h": 0.1923
         },
-        "scale": 2.3
+        "scale": 2.9
       },
       {
-        "label": "Noodle firmness question",
+        "label": "Frame 2 area 4",
+        "frameId": "frame2",
         "rect": {
-          "x": 0.51,
-          "y": 0.66,
-          "w": 0.47,
-          "h": 0.17
+          "x": 0.004,
+          "y": 0.4372,
+          "w": 0.3307,
+          "h": 0.1923
         },
-        "scale": 2.3
+        "scale": 2.9
       },
       {
-        "label": "Noodle firmness options",
+        "label": "Frame 2 area 5",
+        "frameId": "frame2",
         "rect": {
-          "x": 0.02,
-          "y": 0.82,
-          "w": 0.68,
-          "h": 0.17
+          "x": 0.3347,
+          "y": 0.4372,
+          "w": 0.3307,
+          "h": 0.1923
         },
-        "scale": 1.9
+        "scale": 2.9
       },
       {
-        "label": "Very firm choice",
+        "label": "Frame 2 area 6",
+        "frameId": "frame2",
         "rect": {
-          "x": 0.66,
-          "y": 0.82,
-          "w": 0.32,
-          "h": 0.17
+          "x": 0.6653,
+          "y": 0.4372,
+          "w": 0.3307,
+          "h": 0.1923
         },
-        "scale": 2.25
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 1",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.019,
+          "y": 0.653,
+          "w": 0.299,
+          "h": 0.1473
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 2",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.318,
+          "y": 0.653,
+          "w": 0.299,
+          "h": 0.1473
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 3",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.6169,
+          "y": 0.653,
+          "w": 0.299,
+          "h": 0.1473
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 4 area 1",
+        "frameId": "frame4",
+        "rect": {
+          "x": 0.019,
+          "y": 0.8327,
+          "w": 0.3203,
+          "h": 0.155
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 4 area 2",
+        "frameId": "frame4",
+        "rect": {
+          "x": 0.3393,
+          "y": 0.8327,
+          "w": 0.3203,
+          "h": 0.155
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 4 area 3",
+        "frameId": "frame4",
+        "rect": {
+          "x": 0.6597,
+          "y": 0.8327,
+          "w": 0.3203,
+          "h": 0.155
+        },
+        "scale": 2.9
       }
     ]
   },

@@ -91,16 +91,35 @@ Each `pages/page-XXX/metadata.json` must describe both the image and the reader 
     ]
   },
   "zoom": {
+    "frames": [
+      {
+        "id": "frame1",
+        "label": "Story panel or comic frame label",
+        "polygon": [
+          { "x": 0.0, "y": 0.0 },
+          { "x": 1.0, "y": 0.0 },
+          { "x": 1.0, "y": 0.3 },
+          { "x": 0.0, "y": 0.3 }
+        ]
+      }
+    ],
     "points": [
       {
         "label": "Focus label",
+        "frameId": "frame1",
         "rect": {
           "x": 0.1,
           "y": 0.1,
           "w": 0.35,
           "h": 0.2
         },
-        "scale": 2.3
+        "scale": 2.3,
+        "polygon": [
+          { "x": 0.1, "y": 0.1 },
+          { "x": 0.45, "y": 0.1 },
+          { "x": 0.45, "y": 0.3 },
+          { "x": 0.1, "y": 0.3 }
+        ]
       }
     ]
   },
@@ -108,7 +127,11 @@ Each `pages/page-XXX/metadata.json` must describe both the image and the reader 
 }
 ```
 
-Use normalized `rect` values from `0` to `1`, where `(0, 0)` is the top-left of the image and `(1, 1)` is the bottom-right. Choose rectangles by reading the page and framing each important speech bubble, sign, menu, option label group, panel, or action beat in a sensible reading order. Do a coverage pass before finishing: every learner-relevant Japanese surface on the page should appear in the learning overlay and in at least one useful zoom point. For choice lists such as ramen flavors, toppings, or noodle firmness, include a dedicated focus frame for the labels/options before the character's selected response. Avoid redundant adjacent frames that show nearly the same content. The reader fits each rectangle into the viewport; small black margins are acceptable when an edge frame needs to stay centered. Use `scale` as the maximum zoom for that frame, never above `3`. Include romaji for both sentence and vocabulary entries.
+Use normalized values from `0` to `1`, where `(0, 0)` is the top-left of the image and `(1, 1)` is the bottom-right. Guided zoom metadata has two separate shape concepts: `zoom.frames` are full story panels or comic frames, and `zoom.points` are readable camera targets inside those frames. The blur spotlight uses the active point's `frameId` to find a `zoom.frames` polygon and blurs everything outside that story frame. The camera uses the active point's `rect` to decide where to zoom.
+
+Every `zoom.points[]` entry must include `frameId`, `rect`, and `scale`. Choose zoom point rectangles by reading the page and framing each important speech bubble, sign, menu, option label group, panel detail, or action beat in a sensible reading order. Use `zoom.frames[].polygon` for irregular or angled panels; use a four-point polygon for rectangular panels. A zoom point may include its own optional `polygon` only for debugging and future tooling, but it does not drive the blur spotlight. Do a coverage pass before finishing: every learner-relevant Japanese surface on the page should appear in the learning overlay and in at least one useful zoom point. For choice lists such as ramen flavors, toppings, or noodle firmness, include a dedicated focus frame for the labels/options before the character's selected response. Avoid redundant adjacent frames that show nearly the same content. The reader fits each zoom point rectangle into the viewport; small black margins are acceptable when an edge frame needs to stay centered. Use `scale` as the maximum zoom for that point, never above `3`. Include romaji for both sentence and vocabulary entries.
+
+Zoom frames must stay readable. If a panel or learning target spans almost the full width or full height of the page image, do not represent it with a single broad guided zoom point. Split it into at least two guided zoom points in reading order, such as left/right for a full-width band or top/bottom for a full-height column. As a rule of thumb, any `rect.w >= 0.88` or `rect.h >= 0.88` needs neighboring zoom points that divide that large frame into smaller readable regions instead of showing the whole page-like strip at once.
 
 ## Add A Book
 
@@ -127,7 +150,7 @@ Use normalized `rect` values from `0` to `1`, where `(0, 0)` is the top-left of 
 4. For multi-page imports, prefer using Node to write `metadata.json` files as UTF-8. Japanese metadata can display as mojibake in Windows PowerShell if read with the wrong encoding; JSON validation should use Node `fs.readFileSync(file, "utf8")` or another explicit UTF-8 reader.
 5. Read the Japanese text in the image. Add sentence explanations for English speakers learning Japanese, including `japanese`, `reading`, `romaji`, `english`, and a compact `note`.
 6. Add vocabulary entries for the main words, phrases, signs, menu items, and sound effects learners should notice. Include `term`, `reading`, `romaji`, `meaning`, and `note`.
-7. Choose guided zoom frames in reading order. Include a clear `label`, normalized `rect` with `x`, `y`, `w`, and `h`, and page-specific maximum `scale` no higher than `3`. Include menu/choice label groups as their own frames when the page uses them for learning context. Prefer fewer, well-framed regions over many overlapping frames.
+7. Choose story frames and guided zoom points in reading order. Add page-level `zoom.frames` polygons for the real comic panels, then add `zoom.points` with clear `label`, required `frameId`, normalized `rect` with `x`, `y`, `w`, and `h`, and page-specific maximum `scale` no higher than `3`. Include menu/choice label groups as their own zoom points when the page uses them for learning context. Prefer fewer, well-framed regions over many overlapping points. If a useful story frame spans nearly the full width or height of the image, split that visual area into at least two adjacent zoom points so the reader never lands on a giant strip that is too small to read.
 8. Add the metadata path to the book's `pages` array in `app.js`.
 9. Only update the library chapter label if the visible cover should represent a different chapter.
 
@@ -143,7 +166,7 @@ Preserve these interactions when modifying the app:
 6. The fullscreen button stays at the bottom-right of the reader.
 7. Keep persistent reader UI minimal. Do not show a page number counter unless the user asks for it.
 8. Do not show persistent left/right arrow buttons in the reader. Navigation should stay gesture and keyboard driven after the tutorial.
-9. The zoom button toggles guided zoom mode. In guided zoom mode, horizontal swipes and keyboard left/right arrows move between `zoom.points`. Each point fits a `rect` frame nicely in the viewport, with a quick animated movement between frames on the same page. When the reader passes the final zoom frame, continue to zoom frame 1 of the next page. When moving backward before the first zoom frame, continue to the final zoom frame of the previous page.
+9. The zoom button toggles guided zoom mode. In guided zoom mode, horizontal swipes and keyboard left/right arrows move between `zoom.points`. Each point fits its `rect` target nicely in the viewport, with a quick animated movement between points on the same page. The active point's `frameId` selects a page-level `zoom.frames` polygon; everything outside that story frame receives a subtle blurred black filter, so the full panel remains readable and the rest of the page becomes quiet context. When the reader passes the final zoom frame, continue to zoom frame 1 of the next page. When moving backward before the first zoom frame, continue to the final zoom frame of the previous page.
 10. Preserve low-impact async preloading. The library should warm the first page metadata and image for each visible story, and the reader should warm the current, next, and previous page images without blocking rendering.
 
 ## Add Universe Or Story Data
@@ -152,4 +175,4 @@ Use focused Markdown or JSON files. Prefer one file per character, place, monste
 
 ## Verification
 
-Validate JSON before finishing. For Japanese metadata, prefer Node-based UTF-8 validation over PowerShell `ConvertFrom-Json` unless PowerShell is explicitly reading UTF-8. Check that every registered metadata path exists, every referenced image exists, image dimensions match metadata, every sentence has `japanese`, `reading`, `romaji`, `english`, and `note`, every vocabulary item has `term`, `reading`, `romaji`, `meaning`, and `note`, and every zoom `scale` is `<= 3`. Run `node --check app.js` after app changes. If the server is running, confirm `app.js`, at least one new metadata file, and at least one new page image return HTTP `200`. For UI changes, serve `index.html` and confirm the cover list, reader, page navigation, fullscreen button, learning overlay, and guided zoom behavior.
+Validate JSON before finishing. For Japanese metadata, prefer Node-based UTF-8 validation over PowerShell `ConvertFrom-Json` unless PowerShell is explicitly reading UTF-8. Check that every registered metadata path exists, every referenced image exists, image dimensions match metadata, every sentence has `japanese`, `reading`, `romaji`, `english`, and `note`, every vocabulary item has `term`, `reading`, `romaji`, `meaning`, and `note`, every zoom `scale` is `<= 3`, and any near-full-width or near-full-height zoom region has been split into multiple readable zoom points. Run `node --check app.js` after app changes. If the server is running, confirm `app.js`, at least one new metadata file, and at least one new page image return HTTP `200`. For UI changes, serve `index.html` and confirm the cover list, reader, page navigation, fullscreen button, learning overlay, and guided zoom behavior.

@@ -10,8 +10,8 @@
   "chapterName": "The Crows of Ashes",
   "chapter": "Chapter 01: The Crows of Ashes",
   "image": "page-001-smoke-forest.png",
-  "width": 1024,
-  "height": 1536,
+  "width": 2048,
+  "height": 3072,
   "learning": {
     "sentences": [
       {
@@ -75,56 +75,382 @@
     ]
   },
   "zoom": {
+    "frames": [
+      {
+        "id": "frame1",
+        "label": "Frame 1",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.0099
+          },
+          {
+            "x": 0.996,
+            "y": 0.0099
+          },
+          {
+            "x": 0.996,
+            "y": 0.31930000000000003
+          },
+          {
+            "x": 0.004,
+            "y": 0.31930000000000003
+          }
+        ]
+      },
+      {
+        "id": "frame2",
+        "label": "Frame 2",
+        "polygon": [
+          {
+            "x": 0.0138,
+            "y": 0.3315
+          },
+          {
+            "x": 0.5854,
+            "y": 0.3315
+          },
+          {
+            "x": 0.5854,
+            "y": 0.6191
+          },
+          {
+            "x": 0.0138,
+            "y": 0.6191
+          }
+        ]
+      },
+      {
+        "id": "frame3",
+        "label": "Frame 3",
+        "polygon": [
+          {
+            "x": 0.609,
+            "y": 0.3315
+          },
+          {
+            "x": 0.9863,
+            "y": 0.3315
+          },
+          {
+            "x": 0.9863,
+            "y": 0.6191
+          },
+          {
+            "x": 0.609,
+            "y": 0.6191
+          }
+        ]
+      },
+      {
+        "id": "frame4",
+        "label": "Frame 4",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.6388
+          },
+          {
+            "x": 0.1225,
+            "y": 0.6388
+          },
+          {
+            "x": 0.1225,
+            "y": 0.8137000000000001
+          },
+          {
+            "x": 0.004,
+            "y": 0.8137000000000001
+          }
+        ]
+      },
+      {
+        "id": "frame5",
+        "label": "Frame 5",
+        "polygon": [
+          {
+            "x": 0.2647,
+            "y": 0.6388
+          },
+          {
+            "x": 0.5682,
+            "y": 0.6388
+          },
+          {
+            "x": 0.5682,
+            "y": 0.8137000000000001
+          },
+          {
+            "x": 0.2647,
+            "y": 0.8137000000000001
+          }
+        ]
+      },
+      {
+        "id": "frame6",
+        "label": "Frame 6",
+        "polygon": [
+          {
+            "x": 0.5802,
+            "y": 0.6388
+          },
+          {
+            "x": 0.9492,
+            "y": 0.6388
+          },
+          {
+            "x": 0.9492,
+            "y": 0.8137000000000001
+          },
+          {
+            "x": 0.5802,
+            "y": 0.8137000000000001
+          }
+        ]
+      },
+      {
+        "id": "frame7",
+        "label": "Frame 7",
+        "polygon": [
+          {
+            "x": 0.086,
+            "y": 0.825
+          },
+          {
+            "x": 0.2001,
+            "y": 0.825
+          },
+          {
+            "x": 0.2001,
+            "y": 0.9902
+          },
+          {
+            "x": 0.086,
+            "y": 0.9902
+          }
+        ]
+      },
+      {
+        "id": "frame8",
+        "label": "Frame 8",
+        "polygon": [
+          {
+            "x": 0.3077,
+            "y": 0.825
+          },
+          {
+            "x": 0.9223,
+            "y": 0.825
+          },
+          {
+            "x": 0.9223,
+            "y": 0.9902
+          },
+          {
+            "x": 0.3077,
+            "y": 0.9902
+          }
+        ]
+      }
+    ],
     "points": [
       {
-        "label": "Page title and border text",
+        "label": "Frame 1 area 1",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.02,
-          "w": 0.22,
-          "h": 0.29
+          "x": 0.004,
+          "y": 0.0099,
+          "w": 0.3307,
+          "h": 0.1547
         },
-        "scale": 2.6
+        "scale": 2.9
       },
       {
-        "label": "Forest gate and shrine signs",
+        "label": "Frame 1 area 2",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.24,
-          "y": 0.02,
-          "w": 0.74,
-          "h": 0.3
+          "x": 0.3347,
+          "y": 0.0099,
+          "w": 0.3307,
+          "h": 0.1547
         },
-        "scale": 2.1
+        "scale": 2.9
       },
       {
-        "label": "Sweeping girl warning",
+        "label": "Frame 1 area 3",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.33,
-          "w": 0.55,
-          "h": 0.3
+          "x": 0.6653,
+          "y": 0.0099,
+          "w": 0.3307,
+          "h": 0.1547
         },
-        "scale": 2.2
+        "scale": 2.9
       },
       {
-        "label": "Crow omen",
+        "label": "Frame 1 area 4",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.58,
-          "y": 0.34,
-          "w": 0.4,
-          "h": 0.29
+          "x": 0.004,
+          "y": 0.1646,
+          "w": 0.3307,
+          "h": 0.1547
         },
-        "scale": 2.2
+        "scale": 2.9
       },
       {
-        "label": "Arrival and final thought",
+        "label": "Frame 1 area 5",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.64,
-          "w": 0.96,
-          "h": 0.34
+          "x": 0.3347,
+          "y": 0.1646,
+          "w": 0.3307,
+          "h": 0.1547
         },
-        "scale": 2
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 6",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.1646,
+          "w": 0.3307,
+          "h": 0.1547
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 1",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.0138,
+          "y": 0.3315,
+          "w": 0.2858,
+          "h": 0.1438
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 2",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.2996,
+          "y": 0.3315,
+          "w": 0.2858,
+          "h": 0.1438
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 3",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.0138,
+          "y": 0.4753,
+          "w": 0.2858,
+          "h": 0.1438
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 4",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.2996,
+          "y": 0.4753,
+          "w": 0.2858,
+          "h": 0.1438
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 1",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.609,
+          "y": 0.3315,
+          "w": 0.3773,
+          "h": 0.1438
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 2",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.609,
+          "y": 0.4753,
+          "w": 0.3773,
+          "h": 0.1438
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 4 area 1",
+        "frameId": "frame4",
+        "rect": {
+          "x": 0.004,
+          "y": 0.6388,
+          "w": 0.1185,
+          "h": 0.1749
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 5 area 1",
+        "frameId": "frame5",
+        "rect": {
+          "x": 0.2647,
+          "y": 0.6388,
+          "w": 0.3035,
+          "h": 0.1749
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 6 area 1",
+        "frameId": "frame6",
+        "rect": {
+          "x": 0.5802,
+          "y": 0.6388,
+          "w": 0.369,
+          "h": 0.1749
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 7 area 1",
+        "frameId": "frame7",
+        "rect": {
+          "x": 0.086,
+          "y": 0.825,
+          "w": 0.1141,
+          "h": 0.1652
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 8 area 1",
+        "frameId": "frame8",
+        "rect": {
+          "x": 0.3077,
+          "y": 0.825,
+          "w": 0.3073,
+          "h": 0.1652
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 8 area 2",
+        "frameId": "frame8",
+        "rect": {
+          "x": 0.615,
+          "y": 0.825,
+          "w": 0.3073,
+          "h": 0.1652
+        },
+        "scale": 2.9
       }
     ]
   },

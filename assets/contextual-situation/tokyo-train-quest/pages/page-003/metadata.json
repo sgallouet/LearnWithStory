@@ -96,56 +96,239 @@
     ]
   },
   "zoom": {
+    "frames": [
+      {
+        "id": "frame1",
+        "label": "Frame 1",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.0112
+          },
+          {
+            "x": 0.996,
+            "y": 0.0112
+          },
+          {
+            "x": 0.996,
+            "y": 0.4793
+          },
+          {
+            "x": 0.004,
+            "y": 0.4793
+          }
+        ]
+      },
+      {
+        "id": "frame2",
+        "label": "Frame 2",
+        "polygon": [
+          {
+            "x": 0.0189,
+            "y": 0.4902
+          },
+          {
+            "x": 0.9811000000000001,
+            "y": 0.4902
+          },
+          {
+            "x": 0.9811000000000001,
+            "y": 0.6449
+          },
+          {
+            "x": 0.0189,
+            "y": 0.6449
+          }
+        ]
+      },
+      {
+        "id": "frame3",
+        "label": "Frame 3",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.6559
+          },
+          {
+            "x": 0.996,
+            "y": 0.6559
+          },
+          {
+            "x": 0.996,
+            "y": 0.9870000000000001
+          },
+          {
+            "x": 0.004,
+            "y": 0.9870000000000001
+          }
+        ]
+      }
+    ],
     "points": [
       {
-        "label": "Overhead sign cluster",
+        "label": "Frame 1 area 1",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.02,
-          "w": 0.96,
-          "h": 0.24
+          "x": 0.004,
+          "y": 0.0112,
+          "w": 0.3307,
+          "h": 0.2341
         },
-        "scale": 2.2
+        "scale": 2.9
       },
       {
-        "label": "Direction decision",
+        "label": "Frame 1 area 2",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.27,
-          "w": 0.96,
-          "h": 0.21
+          "x": 0.3347,
+          "y": 0.0112,
+          "w": 0.3307,
+          "h": 0.2341
         },
-        "scale": 2.3
+        "scale": 2.9
       },
       {
-        "label": "Arrival announcement and platform sign",
+        "label": "Frame 1 area 3",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.49,
-          "w": 0.96,
-          "h": 0.22
+          "x": 0.6653,
+          "y": 0.0112,
+          "w": 0.3307,
+          "h": 0.2341
         },
-        "scale": 2.2
+        "scale": 2.9
       },
       {
-        "label": "Direction lesson",
+        "label": "Frame 1 area 4",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.71,
-          "w": 0.96,
-          "h": 0.13
+          "x": 0.004,
+          "y": 0.2452,
+          "w": 0.3307,
+          "h": 0.2341
         },
-        "scale": 2.5
+        "scale": 2.9
       },
       {
-        "label": "Line and destination examples",
+        "label": "Frame 1 area 5",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.85,
-          "w": 0.96,
-          "h": 0.13
+          "x": 0.3347,
+          "y": 0.2452,
+          "w": 0.3307,
+          "h": 0.2341
         },
-        "scale": 2.4
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 6",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.2452,
+          "w": 0.3307,
+          "h": 0.2341
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 1",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.0189,
+          "y": 0.4902,
+          "w": 0.3207,
+          "h": 0.1547
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 2",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.3396,
+          "y": 0.4902,
+          "w": 0.3207,
+          "h": 0.1547
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 3",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.6604,
+          "y": 0.4902,
+          "w": 0.3207,
+          "h": 0.1547
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 1",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.004,
+          "y": 0.6559,
+          "w": 0.3307,
+          "h": 0.1655
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 2",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.6559,
+          "w": 0.3307,
+          "h": 0.1655
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 3",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.6559,
+          "w": 0.3307,
+          "h": 0.1655
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 4",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.004,
+          "y": 0.8215,
+          "w": 0.3307,
+          "h": 0.1656
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 5",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.8215,
+          "w": 0.3307,
+          "h": 0.1656
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 3 area 6",
+        "frameId": "frame3",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.8215,
+          "w": 0.3307,
+          "h": 0.1656
+        },
+        "scale": 2.9
       }
     ]
   },

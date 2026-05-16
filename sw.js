@@ -1,6 +1,6 @@
-const OFFLINE_CACHE_NAME = "learn-with-story-offline-v1";
+const OFFLINE_CACHE_NAME = "learn-with-story-offline-v3";
 const CACHE_PREFIX = "learn-with-story-offline-";
-const APP_SHELL = ["./", "index.html", "app.js", "styles.css"];
+const APP_SHELL = ["./", "index.html", "app.js?v=zoom-mask-20260516", "styles.css?v=zoom-mask-20260516"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

@@ -90,7 +90,7 @@ const books = [
 ];
 
 const MAX_ZOOM_SCALE = 3;
-const OFFLINE_CACHE_NAME = "learn-with-story-offline-v1";
+const OFFLINE_CACHE_NAME = "learn-with-story-offline-v3";
 const OFFLINE_CACHE_KEY = "learn-with-story:cache-stories";
 const OFFLINE_CACHE_SIGNATURE_KEY = "learn-with-story:cache-signature";
 const libraryRoot = document.querySelector("[data-library]");
@@ -123,7 +123,7 @@ function absoluteUrl(path) {
 
 function loadPageMetadata(metadataPath) {
   if (!pageMetadataCache.has(metadataPath)) {
-    const pagePromise = fetch(pageMetadataUrl(metadataPath))
+    const pagePromise = fetch(pageMetadataUrl(metadataPath), { cache: "reload" })
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Could not load ${metadataPath}`);
@@ -201,6 +201,7 @@ function offlineCacheSignature() {
   return JSON.stringify(
     books.map((book) => ({
       id: book.id,
+      cacheName: OFFLINE_CACHE_NAME,
       coverBase: book.coverBase,
       pages: book.pages,
     })),
@@ -526,8 +527,100 @@ function currentPage() {
 }
 
 function currentZoomPoint() {
-  const points = currentPage().zoom?.points || [];
+  const points = resolvedZoomPoints(currentPage());
   return points[state.zoomIndex] || points[0] || { x: 0.5, y: 0.5, scale: 2.2 };
+}
+
+function normalizedCoordinate(value, fallback) {
+  return clamp(Number.isFinite(value) ? value : fallback, 0, 1);
+}
+
+function normalizedZoomRect(point) {
+  const rect = point?.rect;
+
+  if (rect) {
+    const x = clamp(rect.x, 0, 1);
+    const y = clamp(rect.y, 0, 1);
+    const w = clamp(rect.w, 0.04, 1 - x);
+    const h = clamp(rect.h, 0.04, 1 - y);
+
+    return { x, y, w, h };
+  }
+
+  const w = 0.34;
+  const h = 0.24;
+  const centerX = clamp(point?.x ?? 0.5, 0, 1);
+  const centerY = clamp(point?.y ?? 0.5, 0, 1);
+
+  return {
+    x: clamp(centerX - w / 2, 0, 1 - w),
+    y: clamp(centerY - h / 2, 0, 1 - h),
+    w,
+    h,
+  };
+}
+
+function resolvedZoomPoints(page) {
+  return page?.zoom?.points || [];
+}
+
+function normalizedFramePolygon(frame) {
+  if (!Array.isArray(frame?.polygon) || frame.polygon.length < 3) {
+    return [];
+  }
+
+  return frame.polygon.map((vertex) => ({
+    x: normalizedCoordinate(vertex.x, 0.5),
+    y: normalizedCoordinate(vertex.y, 0.5),
+  }));
+}
+
+function currentZoomFrame(page, point) {
+  if (!point?.frameId) {
+    return null;
+  }
+
+  return (page?.zoom?.frames || []).find((frame) => frame.id === point.frameId) || null;
+}
+
+function zoomMaskPath(polygon) {
+  const innerPath = polygon
+    .map((vertex, index) => `${index === 0 ? "M" : "L"}${(vertex.x * 100).toFixed(3)} ${(vertex.y * 100).toFixed(3)}`)
+    .join(" ");
+
+  return `M0 0H100V100H0Z ${innerPath}Z`;
+}
+
+function zoomMaskUrl(polygon) {
+  const svg = [
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">',
+    `<path fill="white" fill-rule="evenodd" d="${zoomMaskPath(polygon)}"/>`,
+    "</svg>",
+  ].join("");
+
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+}
+
+function updateZoomSpotlight(spotlight, page, point) {
+  if (!spotlight) {
+    return;
+  }
+
+  const polygon = normalizedFramePolygon(currentZoomFrame(page, point));
+  const points = polygon.map((vertex) => `${(vertex.x * 100).toFixed(3)},${(vertex.y * 100).toFixed(3)}`).join(" ");
+  const shade = spotlight.querySelector(".zoom-spotlight-image");
+  const outline = spotlight.querySelector(".zoom-focus-polygon");
+  const maskUrl = polygon.length >= 3 ? zoomMaskUrl(polygon) : "";
+  spotlight.classList.toggle("is-missing-frame", polygon.length < 3);
+
+  if (shade) {
+    shade.style.maskImage = maskUrl;
+    shade.style.webkitMaskImage = maskUrl;
+  }
+
+  if (outline) {
+    outline.setAttribute("points", points);
+  }
 }
 
 function computePageFrame(page, point = currentZoomPoint()) {
@@ -550,20 +643,18 @@ function computePageFrame(page, point = currentZoomPoint()) {
     };
   }
 
-  const region = point.rect || point.frame || null;
-  const regionCenterX = region ? region.x + region.w / 2 : point.x;
-  const regionCenterY = region ? region.y + region.h / 2 : point.y;
+  const region = normalizedZoomRect(point);
+  const regionCenterX = region.x + region.w / 2;
+  const regionCenterY = region.y + region.h / 2;
   let scale = Math.min(point.scale || 2.2, MAX_ZOOM_SCALE);
 
-  if (region) {
-    const paddedViewportWidth = viewportWidth * (point.fitWidth || 0.9);
-    const paddedViewportHeight = viewportHeight * (point.fitHeight || 0.86);
-    const fitScale = Math.min(
-      paddedViewportWidth / (region.w * displayWidth),
-      paddedViewportHeight / (region.h * displayHeight),
-    );
-    scale = Math.min(fitScale, scale, MAX_ZOOM_SCALE);
-  }
+  const paddedViewportWidth = viewportWidth * (point.fitWidth || 0.9);
+  const paddedViewportHeight = viewportHeight * (point.fitHeight || 0.86);
+  const fitScale = Math.min(
+    paddedViewportWidth / (region.w * displayWidth),
+    paddedViewportHeight / (region.h * displayHeight),
+  );
+  scale = Math.min(fitScale, scale, MAX_ZOOM_SCALE);
 
   const scaledWidth = displayWidth * scale;
   const scaledHeight = displayHeight * scale;
@@ -591,6 +682,7 @@ function applyCurrentZoomFrame() {
   frame.style.width = `${layout.displayWidth}px`;
   frame.style.height = `${layout.displayHeight}px`;
   frame.style.transform = layout.transform;
+  updateZoomSpotlight(frame.querySelector(".zoom-spotlight"), currentPage(), currentZoomPoint());
   return true;
 }
 
@@ -632,7 +724,7 @@ function setPage(delta) {
 }
 
 function setZoomPoint(delta) {
-  const points = currentPage().zoom?.points || [];
+  const points = resolvedZoomPoints(currentPage());
   const nextIndex = state.zoomIndex + delta;
 
   if (nextIndex >= 0 && nextIndex < points.length) {
@@ -654,7 +746,7 @@ function setZoomPoint(delta) {
 
   if (delta < 0 && state.pageIndex > 0) {
     state.pageIndex -= 1;
-    state.zoomIndex = Math.max((currentPage().zoom?.points?.length || 1) - 1, 0);
+    state.zoomIndex = Math.max((resolvedZoomPoints(currentPage()).length || 1) - 1, 0);
     state.overlayOpen = false;
     renderReader();
   }
@@ -740,6 +832,34 @@ function createReaderImage(page) {
   img.draggable = false;
 
   frame.append(img);
+
+  if (state.zoomed) {
+    const spotlight = document.createElement("div");
+    spotlight.className = "zoom-spotlight";
+    spotlight.setAttribute("aria-hidden", "true");
+
+    const shade = document.createElement("img");
+    shade.className = "zoom-spotlight-image";
+    shade.src = page.imageUrl;
+    shade.alt = "";
+    shade.width = page.width;
+    shade.height = page.height;
+    shade.draggable = false;
+
+    const outline = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    outline.classList.add("zoom-focus-outline");
+    outline.setAttribute("viewBox", "0 0 100 100");
+    outline.setAttribute("preserveAspectRatio", "none");
+
+    const polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+    polygon.classList.add("zoom-focus-polygon");
+    outline.append(polygon);
+
+    spotlight.append(shade, outline);
+    updateZoomSpotlight(spotlight, page, currentZoomPoint());
+    frame.append(spotlight);
+  }
+
   return frame;
 }
 

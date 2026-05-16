@@ -103,56 +103,217 @@
     ]
   },
   "zoom": {
+    "frames": [
+      {
+        "id": "frame1",
+        "label": "Frame 1",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.004
+          },
+          {
+            "x": 0.996,
+            "y": 0.004
+          },
+          {
+            "x": 0.996,
+            "y": 0.3997
+          },
+          {
+            "x": 0.004,
+            "y": 0.3997
+          }
+        ]
+      },
+      {
+        "id": "frame2",
+        "label": "Frame 2",
+        "polygon": [
+          {
+            "x": 0.004,
+            "y": 0.4107
+          },
+          {
+            "x": 0.996,
+            "y": 0.4107
+          },
+          {
+            "x": 0.996,
+            "y": 0.9894000000000001
+          },
+          {
+            "x": 0.004,
+            "y": 0.9894000000000001
+          }
+        ]
+      }
+    ],
     "points": [
       {
-        "label": "Arrival announcement",
+        "label": "Frame 1 area 1",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.02,
-          "w": 0.96,
-          "h": 0.22
+          "x": 0.004,
+          "y": 0.004,
+          "w": 0.3307,
+          "h": 0.1978
         },
-        "scale": 2.2
+        "scale": 2.9
       },
       {
-        "label": "Exit 3 and escalator signs",
+        "label": "Frame 1 area 2",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.25,
-          "w": 0.96,
-          "h": 0.21
+          "x": 0.3347,
+          "y": 0.004,
+          "w": 0.3307,
+          "h": 0.1978
         },
-        "scale": 2.2
+        "scale": 2.9
       },
       {
-        "label": "On-time thought",
+        "label": "Frame 1 area 3",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.48,
-          "w": 0.96,
-          "h": 0.17
+          "x": 0.6653,
+          "y": 0.004,
+          "w": 0.3307,
+          "h": 0.1978
         },
-        "scale": 2.4
+        "scale": 2.9
       },
       {
-        "label": "Office greeting",
+        "label": "Frame 1 area 4",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.66,
-          "w": 0.96,
-          "h": 0.16
+          "x": 0.004,
+          "y": 0.2019,
+          "w": 0.3307,
+          "h": 0.1978
         },
-        "scale": 2.3
+        "scale": 2.9
       },
       {
-        "label": "First commute complete",
+        "label": "Frame 1 area 5",
+        "frameId": "frame1",
         "rect": {
-          "x": 0.02,
-          "y": 0.84,
-          "w": 0.96,
-          "h": 0.14
+          "x": 0.3347,
+          "y": 0.2019,
+          "w": 0.3307,
+          "h": 0.1978
         },
-        "scale": 2.4
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 1 area 6",
+        "frameId": "frame1",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.2019,
+          "w": 0.3307,
+          "h": 0.1978
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 1",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.004,
+          "y": 0.4107,
+          "w": 0.3307,
+          "h": 0.1929
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 2",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.4107,
+          "w": 0.3307,
+          "h": 0.1929
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 3",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.4107,
+          "w": 0.3307,
+          "h": 0.1929
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 4",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.004,
+          "y": 0.6036,
+          "w": 0.3307,
+          "h": 0.1929
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 5",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.6036,
+          "w": 0.3307,
+          "h": 0.1929
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 6",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.6036,
+          "w": 0.3307,
+          "h": 0.1929
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 7",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.004,
+          "y": 0.7965,
+          "w": 0.3307,
+          "h": 0.1929
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 8",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.3347,
+          "y": 0.7965,
+          "w": 0.3307,
+          "h": 0.1929
+        },
+        "scale": 2.9
+      },
+      {
+        "label": "Frame 2 area 9",
+        "frameId": "frame2",
+        "rect": {
+          "x": 0.6653,
+          "y": 0.7965,
+          "w": 0.3307,
+          "h": 0.1929
+        },
+        "scale": 2.9
       }
     ]
   },
